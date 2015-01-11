@@ -857,6 +857,14 @@ a:focus.page-numbers{
     background: hsl(198, 95%, 38%);
 }
 
+.logo-box {
+	position: absolute;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	z-index: 1;
+}
+
 .title-box {
 	position: absolute;
 	position: absolute;

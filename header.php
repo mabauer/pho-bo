@@ -27,7 +27,7 @@
 		
 			<div id="site-header">
 				<?php if ( get_header_image() ) : ?>
-					<div id="site-logo">
+					<div id="site-logo" class="logo-box">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
 						</a>
