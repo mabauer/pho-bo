@@ -1,0 +1,150 @@
+/*
+Theme Name: pho
+Layout: Sidebar right
+*/
+
+.site-content {
+	max-width: 880px;
+    // padding: 2rem;
+    margin: auto;
+}
+
+/*
+.single .site-content,
+.page .site-content,
+.blog .site-content { 
+    background: #fff; 
+    background: hsl(0, 0%, 100%);
+}
+*/
+
+.single .content-area, 
+.page .content-area {
+	background: #fff;
+	background: hsl(0, 0%, 100%);
+}
+
+
+.site-content .widget-area {
+    float: right;
+    width: 360px;
+    padding: 2rem;
+    background: #fff;
+    background: hsl(0, 0%, 100%);
+}
+
+.site-footer {
+    width: 100%;
+    clear: both;
+}
+
+.site-header {
+	max-width: 880px;
+	position: relative;
+	margin: auto;
+}
+
+.entry-header,
+.page-header,
+.entry-content,
+.entry-footer,
+.tag-links,
+.post-navigation,
+.comments-area,
+.paging-navigation {
+    position: relative;
+    max-width: 880px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 399px) {
+    .entry-header,
+    .page-header,
+    .entry-content,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation { padding: 0 2rem; }
+}
+
+.page-header,
+.paging-navigation {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: #fff;
+}
+
+.page-header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.index-box,
+.author-index {
+    max-width: 880px;
+    max-width: 88rem;
+    padding: 1em 0 2em;
+    margin: 0 auto 2em;
+    background: #fff;
+    background: hsl(0, 0%, 100%);
+}
+
+
+@media screen and (min-width: 1260px) {
+	.site-header {
+		max-width: 1280px;
+		margin: auto;
+	}
+	.site-content {
+		margin: auto;
+		max-width: 1280px;
+		padding-bottom: 2em;	
+	}
+    .content-area {
+        float: left;
+    }
+
+    .index-box,
+    .entry-header,
+    .page-header,
+    .entry-content,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation,
+    .author-index { margin-right: 0; }
+    
+}
+
+@media screen and (max-width: 1259px) {  
+    .site-content .widget-area {
+        float: none;
+        width: auto;
+        // max-width: 880px;
+        margin: 1em auto 0;
+    }
+}
+
+@media screen and (min-width: 1820px) {
+    .image-shifter {
+        float: none;
+        width: 1060px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1540px) and (max-width: 1820px) {
+    .image-shifter { margin-right: 380px;}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1819px) {
+    .image-shifter {
+        float: right;
+        width: 1060px; 
+    }
+}
