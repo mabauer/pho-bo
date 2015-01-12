@@ -106,9 +106,9 @@ function pho_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
         
-        register_sidebar( array(
+    register_sidebar( array(
 		'name'          => __( 'Footer Widgets', 'pho' ),
-                'description'   => __( 'Footer widgets area appears, not surprisingly, in the footer of the site.', 'pho' ),
+        'description'   => __( 'Footer widgets area appears, not surprisingly, in the footer of the site.', 'pho' ),
 		'id'            => 'sidebar-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -123,9 +123,6 @@ add_action( 'widgets_init', 'pho_widgets_init' );
  */
 function pho_scripts() {
         
-        // Get the current layout setting (sidebar left or right)
-        $pho_layout = get_option( 'layout_setting' );
-
         // Load parent theme stylesheet even when child theme is active
         if ( is_child_theme() ) {
                 wp_enqueue_style( 'pho-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
@@ -135,11 +132,8 @@ function pho_scripts() {
 
         if (is_page_template('page-templates/page-nosidebar.php') || ! is_active_sidebar( 'sidebar-1' )) {
             wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/no-sidebar.css' );
-        } elseif ( $pho_layout == 'left-sidebar' ) {
-            wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/sidebar-content.css' );
         } else {
             wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css' );
-
         }
 
         // Load child theme stylesheet

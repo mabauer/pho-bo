@@ -71,7 +71,7 @@ function pho_register_theme_customizer( $wp_customize ) {
         )
     );
     
-    // Add option to select sidebar position in the theme
+    // Additional theme options: archive display with excerpts...
     $wp_customize->add_section(
 	// ID
 	'option_section',
@@ -82,36 +82,7 @@ function pho_register_theme_customizer( $wp_customize ) {
             'description' => __( 'Change the default display options for the theme.', 'pho' )
         )
     );
-    
-    // Sidebar layout
-    
-    $wp_customize->add_setting(
-        // ID
-        'layout_setting',
-        // Arguments array
-        array(
-            'default' => 'right-sidebar',
-            'type' => 'option',
-            'sanitize_callback' => 'pho_sanitize_layout'
-        )
-    );
-    $wp_customize->add_control(
-	// ID
-	'layout_control',
-	// Arguments array
-	array(
-            'type' => 'radio',
-            'label' => __( 'Sidebar position', 'pho' ),
-            'section' => 'option_section',
-            'choices' => array(
-                'left-sidebar' => __( 'Left sidebar', 'pho' ),
-                'right-sidebar' => __( 'Right sidebar', 'pho' )
-            ),
-            // This last one must match setting ID from above
-            'settings' => 'layout_setting'
-        )
-    );
-    
+        
     // Archive content display
     $wp_customize->add_setting(
         // ID
@@ -143,14 +114,6 @@ function pho_register_theme_customizer( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'pho_register_theme_customizer' );
-
-// Sanitize sidebar layout
-function pho_sanitize_layout( $value ) {
-    if ( ! in_array( $value, array( 'left-sidebar', 'right-content' ) ) )
-        $value = 'right-sidebar';
- 
-    return $value;
-}
 
 // Sanitize archive display
 function pho_sanitize_archive( $value ) {
