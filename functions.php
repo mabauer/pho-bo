@@ -40,7 +40,7 @@ function pho_setup() {
 	* Set the content width based on the theme's design and stylesheet.
 	*/
 	if ( ! isset( $content_width ) ) {
-		   $content_width = 700; /* pixels */
+		   $content_width = 840; /* pixels */
 	}
 	
 	// This theme styles the visual editor to resemble the theme style.
@@ -56,12 +56,12 @@ function pho_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	// Featured image sizes for resesponsive display
-	add_image_size('large-thumb', 700, 9999); 
-	add_image_size('medium-thumb', 800, 490);
-	add_image_size('small-thumb', 400, 245);
+	// Featured image sizes for responsive display
+	// add_image_size('large-thumb', 1280, 9999); 
+	add_image_size('medium-thumb', 880, 9999);
+	add_image_size('small-thumb', 440, 9999);
 	// Featured image size for small image in archives
-	add_image_size('index-thumb', 780, 9999); 
+	add_image_size('index-thumb', 700, 700); 
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

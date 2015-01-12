@@ -294,11 +294,14 @@ function pho_the_responsive_thumbnail($post_id) {
     
     echo '<picture>';
     echo '<!--[if IE 9]><video style="display: none;"><![endif]-->';
-    echo '<source srcset="' . $thumb_data['thumb_large'] . ', ' . $thumb_data['thumb_original'] . ' 2x" media="(min-width: 800px)">';
-    echo '<source srcset="' . $thumb_data['thumb_medium'] . ', ' . $thumb_data['thumb_large'] . ' 2x" media="(min-width: 400px)">'; 
-    echo '<source srcset="' . $thumb_data['thumb_small'] . ', ' . $thumb_data['thumb_medium'] . ' 2x">'; 
+    // Large thumb not needed right now.
+    // echo '<source media="(min-width: 880px)" srcset="' . $thumb_data['thumb_large'][0] . ' ' . $thumb_data['thumb_large'][1] . 'w" >';
+    echo '<source media="(min-width: 440px)" srcset="' . $thumb_data['thumb_medium'][0] . ' ' . $thumb_data['thumb_medium'][1] . 'w, '
+    		. $thumb_data['thumb_original'][0] . ' 2x " >'; 
+    echo '<source srcset="' . $thumb_data['thumb_small'][0]  . ' ' . $thumb_data['thumb_small'][1] . 'w ,' 
+    		. $thumb_data['thumb_medium'][0] . ' ' . $thumb_data['thumb_medium'][1] . 'w 2x " >'; 
     echo '<!--[if IE 9]></video><![endif]-->';
-    echo '<img srcset="' . $thumb_data['thumb_small'] . ', ' . $thumb_data['thumb_medium'] . ' 2x" alt="' . $thumb_data['thumb_alt'] . '">';
+    echo '<img src="' . $thumb_data['thumb_medium'][0] . '" width="' . $thumb_data['thumb_medium'][1] . '" height="' . $thumb_data['thumb_medium'][2] . ' alt="' . $thumb_data['thumb_alt'] . '">';
     echo '</picture>';
 }
 
@@ -318,15 +321,15 @@ function pho_set_image_transient($post_id) {
     if ( !$alt_text ) { $alt_text = esc_html( get_the_title($post_id) ); }
 
     $thumb_original = wp_get_attachment_image_src($attachment_id, 'full');
-    $thumb_large    = wp_get_attachment_image_src($attachment_id, 'large-thumb');
+    // $thumb_large    = wp_get_attachment_image_src($attachment_id, 'large-thumb');
     $thumb_medium   = wp_get_attachment_image_src($attachment_id, 'medium-thumb');
     $thumb_small    = wp_get_attachment_image_src($attachment_id, 'small-thumb');
         
     $thumb_data = array(
-        'thumb_original' => $thumb_original[0],
-        'thumb_large'    => $thumb_large[0],
-        'thumb_medium'   => $thumb_medium[0],
-        'thumb_small'    => $thumb_small[0],
+        'thumb_original' => $thumb_original,
+        // 'thumb_large'    => $thumb_large,
+        'thumb_medium'   => $thumb_medium,
+        'thumb_small'    => $thumb_small,
         'thumb_alt'      => $alt_text
     );
 

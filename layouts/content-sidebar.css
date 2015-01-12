@@ -87,6 +87,7 @@ Layout: Sidebar right
 .author-index {
     max-width: 880px;
     max-width: 88rem;
+    width: 100%;
     padding: 1em 0 2em;
     margin: 0 auto 2em;
     background: #fff;
@@ -106,6 +107,7 @@ Layout: Sidebar right
 	}
     .content-area {
         float: left;
+        max-width: 880px;
     }
 
     .index-box,
@@ -130,21 +132,3 @@ Layout: Sidebar right
     }
 }
 
-@media screen and (min-width: 1820px) {
-    .image-shifter {
-        float: none;
-        width: 1060px;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (min-width: 1540px) and (max-width: 1820px) {
-    .image-shifter { margin-right: 380px;}
-}
-
-@media screen and (min-width: 1440px) and (max-width: 1819px) {
-    .image-shifter {
-        float: right;
-        width: 1060px; 
-    }
-}

@@ -7,15 +7,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <?php 
-    if (has_post_thumbnail()) {
-        echo '<div class="single-post-thumbnail clear">';
-        echo '<div class="image-shifter">';
-        pho_the_responsive_thumbnail( get_the_ID() );
-        echo '</div>';
-        echo '</div>';
-    }
-    ?>
+	<?php 
+		if (has_post_thumbnail()) {
+			echo '<div class="thumbnail-box clear">';
+			pho_the_responsive_thumbnail( get_the_ID() );
+			echo '</div>';
+		}
+
+	?>
+    
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
