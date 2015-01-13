@@ -582,6 +582,15 @@ a:active {
 
 } /* End responsive menu */
 
+/* Small screens:
+   Move the menu down a bit to create more room for the header (logo + texts) */
+
+@media screen and (max-width: 600px) {
+	.main-navigation {
+		padding-top: 64px;
+	}
+}
+
 /*--------------------------------------------------------------
 5.3 Social Menu
 --------------------------------------------------------------*/
@@ -922,7 +931,16 @@ a:focus.page-numbers{
     background: hsla(0, 0%, 0%, .7);
 }
 
-/* Header responsive */
+/* Header responsive: 
+   Move it right to the top on small screens */
+   
+@media screen and (max-width: 900px) {
+	.header-area {
+		margin-top: 0rem;
+	}	
+}   
+   
+
 @media screen and (max-width: 900px) {
     .site-branding { padding: 0; }
 }
