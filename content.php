@@ -6,15 +6,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="index-box">
-    <?php
-        if (has_post_thumbnail()) {
-            echo '<div class="thumbnail-box clear">';
-            echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'pho') . get_the_title() . '" rel="bookmark">';
-            pho_the_responsive_thumbnail( get_the_ID() );
-            echo '</a>';
-            echo '</div>';
-        }
-    ?>
 	<header class="entry-header clear">
             <?php
 
@@ -45,6 +36,17 @@
                         <?php edit_post_link( sprintf( ' | %s', __( 'Edit', 'pho' ) ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+		
+		<?php
+			if (has_post_thumbnail()) {
+				echo '<div class="thumbnail-box clear">';
+				echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'pho') . get_the_title() . '" rel="bookmark">';
+				pho_the_responsive_thumbnail( get_the_ID() );
+				echo '</a>';
+				echo '</div>';
+			}
+		?>
+
 	</header><!-- .entry-header -->
 
         <?php
