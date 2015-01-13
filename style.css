@@ -912,6 +912,7 @@ a:focus.page-numbers{
 	background: #313131;
     background: hsl(0, 0%, 19%); 
     margin-top: 4rem; 
+    margin-bottom: 4rem;
 }
 
 .header-image img {
@@ -937,6 +938,7 @@ a:focus.page-numbers{
 @media screen and (max-width: 900px) {
 	.header-area {
 		margin-top: 0rem;
+		margin-bottom: 0rem;
 	}	
 }   
    
