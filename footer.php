@@ -25,8 +25,8 @@
 			printf(
 				/* translators: %1$s = text link: pho, URL: http://wordpress.org/themes/pho/, %2$s = text link: mor10.com, URL: http://mor10.com/ */
 				__( 'Theme: %1$s by %2$s', 'pho' ),
-                                '<a href="http://wordpress.org/themes/pho/" rel="nofollow">' . esc_attr( 'pho', 'pho' ) . '</a>',
-				'<a href="http://mor10.com/" rel="designer nofollow">' . esc_attr__( 'mor10.com', 'pho' ) . '</a>' ); ?>
+                                '<a href="http://mkbauer.de/" rel="nofollow">' . esc_attr( 'pho', 'pho' ) . '</a>',
+				'<a href="http://mkbauer.de/" rel="designer nofollow">' . esc_attr__( 'Markus Bauer', 'pho' ) . '</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
