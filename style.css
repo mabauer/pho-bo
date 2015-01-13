@@ -1143,8 +1143,8 @@ a:focus.page-numbers{
 .entry-title {
     margin: 0 0 2rem;
     font-weight: 900;
-    font-size: 40px;
-    font-size: 4rem;
+    font-size: 36px;
+    font-size: 3.6rem;
     line-height: 1.3em;
     color: #000;
     color: hsl(0, 0%, 0%);
@@ -1201,8 +1201,8 @@ a:focus.page-numbers{
 }
 
 .entry-content blockquote p {
-    font-size: 28px;
-    font-size: 2.8rem;
+    font-size: 22px;
+    font-size: 2.2rem;
     line-height: 1.5em;
 }
 
