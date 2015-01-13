@@ -1540,7 +1540,7 @@ ol.children { list-style-type: none; }
     font-weight: 600;
     font-size: 14px;
     font-size: 1.4rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Helvetica Neue', 'Lato', sans-serif;
 }
 
 .comment-content ol { margin-left: 1.5em; }
