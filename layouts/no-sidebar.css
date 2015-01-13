@@ -5,6 +5,9 @@ Layout: No sidebar
 
 .site-content {
     padding-bottom: 4em;
+    max-width: 880px;
+    max-width: 88rem;
+    margin: auto;
 }
 
 .single .site-content,
@@ -18,6 +21,12 @@ Layout: No sidebar
     width: 100%;
 }
 
+.site-header {
+	max-width: 880px;
+	position: relative;
+	margin: auto;
+}
+
 .entry-header,
 .page-header,
 .entry-content,
@@ -27,9 +36,9 @@ Layout: No sidebar
 .comments-area,
 .paging-navigation {
     position: relative;
-    max-width: 780px;
-    max-width: 78rem;
-    padding: 0 4rem;
+    max-width: 880px;
+    max-width: 88rem;
+    padding: 0 2rem;
     margin: 0 auto;
 }
 
@@ -61,10 +70,38 @@ Layout: No sidebar
 
 .index-box,
 .author-index {
-    max-width: 780px;
-    max-width: 78rem;
+    max-width: 880px;
+    max-width: 88rem;
     padding: 1em 0 2em;
     margin: 0 auto 2em;
     background: #fff;
     background: hsl(0, 0%, 100%);
 }
+
+@media screen and (min-width: 1280px) {
+	.site-header {
+		max-width: 1280px;
+		margin: auto;
+	}
+	.site-content {
+		margin: auto;
+		max-width: 1280px;
+		padding-bottom: 2em;	
+	}
+    .content-area {
+        max-width: 1280px;
+    }
+
+    .index-box,
+    .entry-header,
+    .page-header,
+    .entry-content,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation,
+    .author-index { margin: auto; }
+    
+}
+
