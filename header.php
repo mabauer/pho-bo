@@ -53,7 +53,10 @@
 				
 				<?php pho_social_menu(); ?>
 				
-				<h1 class="menu-toggle"><a href="#"><?php _e( 'Menu', 'pho' ); ?></a></h1>
+				<h1 class="menu-toggle">
+					<i class="fa fa-bars"></i>
+					<a href="#" class="screen-reader-text"><?php _e( 'Search', 'pho' ); ?></a>
+				</h1>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 								
