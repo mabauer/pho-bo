@@ -1688,8 +1688,9 @@ a.author-link {
 
 /* Share buttons inserted by Jetpack */
 div.sharedaddy h3.sd-title {
-	font-size: 14pt;
-	font-weight: 700;
+	font-size: 16px !important;
+	font-size: 1.6rem !important;
+	font-weight: 700 !important;
 }
 
 /*--------------------------------------------------------------
