@@ -1210,8 +1210,8 @@ a:focus.page-numbers{
 }
 
 blockquote cite {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 22px;
+    font-size: 2.2rem;
 }
 
 /* Smaller fonts for smaller screens */
@@ -1272,7 +1272,7 @@ blockquote cite {
 
 /* Blockquotes */
 blockquote {
-    padding: 1em 1.5em 0;
+    padding: 1.5em 1.5em 0;
     margin-bottom: 1em;
     font-style: italic;
     border-top: solid 1px hsl(0, 0%, 80%);
