@@ -1815,4 +1815,8 @@ object { max-width: 100%; }
     color: hsl(0, 0%, 100%);
 }
 
-.site-info { text-align: center; }
+.site-info { 
+	text-align: center;
+	font-size: 14px; 
+	font-size: 1.4rem;
+}
