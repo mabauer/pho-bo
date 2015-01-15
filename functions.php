@@ -174,6 +174,16 @@ function pho_scripts() {
 add_action( 'wp_enqueue_scripts', 'pho_scripts' );
 
 /**
+ * Force IE out its compatibility mode. Either use IE=11 oder IE=edge.
+ */
+function pho_ie_compatibility_header() {
+    ?>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <?php
+}
+add_action( 'send_headers', 'pho_ie_compatibility_header', 1);
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

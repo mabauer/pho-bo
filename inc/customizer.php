@@ -125,7 +125,7 @@ function pho_sanitize_archive( $value ) {
 
 function pho_customizer_css() {
     ?>
-    <style type="text/css">
+    /* <style type="text/css">
         .site-branding {
             background: <?php echo get_theme_mod( 'pho_header_color' ); ?>;
         }
@@ -148,6 +148,8 @@ function pho_customizer_css() {
         }
 
     </style>
+    
+    */
     <?php
 }
 add_action( 'wp_head', 'pho_customizer_css' );
