@@ -496,12 +496,14 @@ a:active {
     	position: relative;
     	float: right; 
         display: inline-block;
-        height: 3.9em;
-        padding: 0 1em;
+        height: 54px;
+        width: 54px;
+        padding: 18px 12px 22px 12px;
         font-weight: normal;
         font-size: 14px;
         font-size: 1.4rem;
         text-decoration: none;
+        text-align: center;
         line-height: 3.75em;
         color: white;
     }
@@ -955,7 +957,7 @@ a:focus.page-numbers{
     float: right;
     width: 54px;
     height: 54px;
-    padding: 12px;
+    padding: 18px 12px 22px 12px;
     margin-right: 20px;
     color: #fff;
     text-align: center;
