@@ -1800,7 +1800,7 @@ object { max-width: 100%; }
 	margin-bottom: 2rem;
 }
 
-.thumbnail-box img,
+.thumbnail-box img {
     display: block;
     margin: 0 auto;
 }
