@@ -1,16 +1,20 @@
 // Masonry settings to organize footer widgets
 jQuery(document).ready(function($){
-    var $container = $('#footer-widgets').masonry();
-    enquire.register("screen and (min-width:880px)", {
+    var $container = $('#footer-widgets');
+    enquire.register("screen and (min-width:800px)", {
 
         // Triggered when a media query matches.
         match : function() {
             $container.masonry({
-                columnWidth: 400,
+                columnWidth: '.widget',
                 itemSelector: '.widget',
-                isFitWidth: true,
+                // gutter: 40, // the widgets introduce some spacing on their own.
+                isFitWidth: false,
                 isAnimated: true
             });
+            $container.imagesLoaded(function() {
+  				$container.masonry();	
+			});
         },      
 
         // Triggered when the media query transitions 

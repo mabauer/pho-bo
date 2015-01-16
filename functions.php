@@ -152,9 +152,9 @@ function pho_scripts() {
         wp_enqueue_script( 'pho-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );
         
         wp_enqueue_script( 'pho-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
-        
         wp_enqueue_script( 'pho-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('jquery'), '20140328', true );
         
+		// Masonry is already shipped with Wordpress, it even includes imagesLoaded
         wp_enqueue_script( 'pho-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
         
         wp_enqueue_script( 'pho-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20140429', true );

@@ -1095,7 +1095,13 @@ a:focus.page-numbers{
 /* Search widget */
 .widget_search .search-submit {	display: none; }
 
-.footer-widgets { margin: 0 auto; }
+/* Footer widgets */
+
+.footer-widgets { 
+	margin: 0 auto; 
+	max-width: 880px;
+	width: 100%;
+}
 
 .footer-widgets .widget-title,
 .footer-widgets .widget a:hover,
@@ -1108,20 +1114,35 @@ a:focus.page-numbers{
 
 .footer-widgets .widget {
     float: left;
-    width: 320px;
-    margin: 0 4rem 8rem 4rem;
+    width: 50%;
+    padding: 0 2rem 8rem 2rem;
 }
 
 /* Footer widgets responsive */
-@media screen and (max-width: 879px) {
+
+@media screen and (min-width: 1279px) {
+    #footer-widgets { 
+    	width: 100% !important;
+    	max-width: 1280px !important; 
+    }
+    
+    .footer-widgets .widget {
+        float: left;
+        width: 33%;
+        padding: 0 2rem 8rem 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
     #footer-widgets { width: 100%!important; }
     
     .footer-widgets .widget {
         float: none;
         width: 100%;
-        margin: 0 0 8rem;
+        padding: 0 2rem 8rem 2rem;
     }
 }
+
 /*--------------------------------------------------------------
 11.0 Content
 --------------------------------------------------------------*/
@@ -1391,7 +1412,8 @@ blockquote cite {
 }
 
 /* Meta responsive */
-/* @media screen and (min-width: 1320px) {
+/* 
+@media screen and (min-width: 1320px) {
     .single .entry-meta {
         position: absolute;
         width: 120px;
@@ -1810,7 +1832,7 @@ object { max-width: 100%; }
 --------------------------------------------------------------*/
 
 .site-footer {
-    padding: 2em;
+    padding-top: 2em;
     font-size: 16px;
     font-size: 1.6rem;
     font-family: 'Helvetica Neue', 'Lato', sans-serif;
