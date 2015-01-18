@@ -61,7 +61,7 @@ function pho_setup() {
 	add_image_size('medium-thumb', 880, 9999);
 	add_image_size('small-thumb', 440, 9999);
 	// Featured image size for small image in archives
-	add_image_size('index-thumb', 700, 700); 
+	add_image_size('index-thumb', 700, 700, true); 
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -130,7 +130,9 @@ function pho_scripts() {
                 wp_enqueue_style( 'pho-style', get_stylesheet_uri() );
         }
 
-        if (is_page_template('page-templates/page-nosidebar.php') || ! is_active_sidebar( 'sidebar-1' )) {
+        if (is_page_template('page-templates/page-nosidebar.php') 
+        	|| is_page_template('page-templates/portfolio.php')
+        	|| ! is_active_sidebar( 'sidebar-1' )) {
             wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/no-sidebar.css' );
         } else {
             wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css' );
