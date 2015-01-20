@@ -1507,6 +1507,10 @@ blockquote cite {
     font-family: 'Helevetica Neue', 'Lato', sans-serif;
 }
 
+.image-attachment {
+	margin: 0 -20px;
+}
+
 
 
 /*--------------------------------------------------------------

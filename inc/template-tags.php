@@ -231,7 +231,7 @@ function pho_the_attached_image() {
 	/**
 	 * Filter the default Twenty Fourteen attachment size.
 	 */
-	$attachment_size = apply_filters( 'pho_attachment_size', array( 700, 700 ) );
+	$attachment_size = apply_filters( 'pho_attachment_size', array( 880, 9999 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/*
