@@ -1155,7 +1155,7 @@ ul.sociallinks {
 }
 
 #colophon .widget_pho_sociallinks ul.sociallinks {
-	margin-left: -20px;
+	margin-left: -18px;
     margin-top: -16px;
 }
 
@@ -1175,11 +1175,11 @@ ul.sociallinks li a {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	opacity: .6;
+	opacity: 1;
 }
 
 ul.sociallinks li a:hover {
-	opacity: 1;
+	opacity: 0.6;
 }
 
 ul.sociallinks li a.twitter {background: url(images/socialicons.png) 0 0 no-repeat;}
