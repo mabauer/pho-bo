@@ -37,7 +37,7 @@
                         echo '</span>';
                     }
                     ?>
-                    <?php edit_post_link( __( 'Edit', 'pho' ), '<span class="edit-link">', '</span>' ); ?>
+                    <?php edit_post_link( sprintf('| %s', __( 'Edit', 'pho' )), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
