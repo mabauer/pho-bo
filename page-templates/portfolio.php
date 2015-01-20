@@ -1,6 +1,9 @@
 <?php
 /**
   * Template Name: Portfolio
+  * Displays all posts with a specific tag as a portfolio (using a fancy grid layout)
+  * The default tag is 'portfolio'. This can however be overwritten by setting the 
+  * custom field 'portfolio_tag' for the corresponding page.
  */
 
 get_header(); ?>
@@ -22,18 +25,16 @@ get_header(); ?>
 		<?php endwhile; ?>
 		
 		<div id="portfolio" class="portfolio-grid">
-		
-			<?php $options = get_option('baylys_theme_options');
-				if( $options['portfolio-cat'] != '' ) : ?>
-					<?php $portfolio = new WP_Query( 'category_name='.$options['portfolio-cat'].'&nopaging=true' ); 	?>
-				<?php else : ?>
-					<?php $portfolio = new WP_Query( 'category_name=portfolio&nopaging=true' ); ?>
-				<?php endif  ?>
-
-				<?php while ( $portfolio->have_posts() ) : $portfolio->the_post(); ?>
-					<?php get_template_part( 'content', 'portfolio' ); ?>
-				<?php endwhile; // end of the loop. ?>
-				
+			<?php 
+				$portfolio_tag = get_post_meta($post->ID, 'portfolio_tag', true); 
+				if ('' == $portfolio_tag) 
+					$portfolio_tag = 'portfolio';	
+			?>	
+			<?php $portfolio = new WP_Query( 'tag=' . $portfolio_tag . '&nopaging=true' ); ?>
+			<?php while ( $portfolio->have_posts() ) : $portfolio->the_post(); ?>
+				<?php get_template_part( 'content', 'portfolio' ); ?>
+			<?php endwhile; // end of the loop. ?>
+			
 		</div>
 
 		<?php wp_reset_postdata(); // reset the query ?>
