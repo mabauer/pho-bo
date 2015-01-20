@@ -1147,7 +1147,7 @@ a:focus.page-numbers{
 11.0 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-10.1 Posts and pages
+11.1 Posts and pages
 --------------------------------------------------------------*/
 .sticky { }
 
@@ -1714,6 +1714,111 @@ a.author-link {
     .author-meta,
     .author-description { margin-left: 0; }
 }
+
+/*--------------------------------------------------------------
+11.7 Portfolio view
+--------------------------------------------------------------*/
+
+/* Portfolio is responsive */
+/* Default: three columns, hover effects, less spacing */
+
+.portfolio-grid {
+	max-width: 880px;
+	width: 100%;
+}
+
+/* Header fades in ... */
+.portfolio-grid .entry-header {
+	position: absolute;
+	top: 2rem;
+	font-size: 14px;	
+	font-size: 1.4rem;
+	opacity: 0;
+}
+
+.portfolio-grid .portfolio-element:hover .entry-header {
+	opacity: 1;
+}
+
+/* ...thumbnail fades out */
+.portfolio-grid a.portfolio-thumb {
+	line-height: 0;
+	opacity: 1;
+}
+
+.portfolio-grid .portfolio-element:hover a.portfolio-thumb {
+	opacity: 0.5;
+}
+
+/* Set up the transitions */
+.portfolio-grid .portfolio-element:hover .entry-header,
+.portfolio-grid .portfolio-element:hover a.portfolio-thumb {
+	-webkit-transition: opacity 0.15s ease-out;
+	   	-ms-transition: opacity 0.15s ease-out;
+	   	 -o-transition: opacity 0.15s ease-out;
+	   	 	transition: opacity 0.15s ease-out;
+}
+
+.portfolio-grid .entry-title {
+	font-size: 18px;	
+	font-size: 1.8rem;
+	margin: 0;
+}
+
+
+.portfolio-grid .portfolio-element {	
+	position: relative;
+    float: left;
+    width: 33%;
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* Three columns, wide display, more spacing */
+
+@media screen and (min-width: 1280px) {
+
+	.intro .entry-header,
+	.intro .entry-content {
+		width: 100% ;
+    	max-width: 1280px ; 
+	}
+
+    .portfolio-grid { 
+    	width: 100% !important;
+    	max-width: 1280px !important; 
+    }
+    
+    .portfolio-grid .portfolio-element {
+        float: left;
+        width: 33%;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+
+/* One column, no hover effects */
+
+@media screen and (max-width: 880px) {
+    .portfolio-grid { width: 100%!important; }
+    
+    .portfolio-grid .portfolio-element {
+        float: none;
+        width: 100%;
+        margin: auto;
+        padding: 0 2rem 8rem 2rem;
+    }
+    
+    .portfolio-grid .entry-header {
+		position: relative;
+		opacity: 1;
+		padding: 0;
+	}
+	
+	.portfolio-grid .portfolio-element:hover a.portfolio-thumb {
+		opacity: 1;
+	}
+}
+
+
 
 /*--------------------------------------------------------------
 12.0 Infinite scroll
