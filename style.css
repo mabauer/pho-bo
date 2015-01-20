@@ -1715,16 +1715,11 @@ a.author-link {
     .author-description { margin-left: 0; }
 }
 
-/* Share buttons inserted by Jetpack */
-div.sharedaddy h3.sd-title {
-	font-size: 16px !important;
-	font-size: 1.6rem !important;
-	font-weight: 700 !important;
-}
-
 /*--------------------------------------------------------------
 12.0 Infinite scroll
 --------------------------------------------------------------*/
+
+
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
@@ -1733,6 +1728,21 @@ div.sharedaddy h3.sd-title {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+12.1 Jetpack: Share buttons
+--------------------------------------------------------------*/
+
+/* Share buttons inserted by Jetpack */
+div.sharedaddy h3.sd-title {
+	font-size: 16px !important;
+	font-size: 1.6rem !important;
+	font-weight: 700 !important;
+}
+
+.sharedaddy a.sd-button {
+	vertical-align: top;
 }
 
 /*--------------------------------------------------------------
