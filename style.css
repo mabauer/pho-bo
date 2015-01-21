@@ -988,7 +988,10 @@ a:focus.page-numbers{
     width: 100%;
 }
 .search-box {
+	float: right;
+	margin-right: 2rem;
     padding: 1em;
+    width: 382px;
     background: #4d4d4d;
     background: hsl(0, 0%, 30%);
 }
@@ -1017,6 +1020,11 @@ a:focus.page-numbers{
         top: 0;
         right: 0;
         margin-right: 0;
+    }
+    
+    .search-box {
+    	width: 100%;
+    	margin-right: 0px;
     }
 }
 
