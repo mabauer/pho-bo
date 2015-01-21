@@ -393,7 +393,7 @@ a:active {
     // text-transform: uppercase;
     background: #313131;
     background: hsl(0, 0%, 19%);
-    padding-top: 30px
+    margin-top: -44px;
 }
 
 .main-navigation ul {
@@ -492,6 +492,11 @@ a:active {
 }
 
 @media screen and (max-width: 900px) {
+
+	.main-navigation {
+		margin-top: -44px;
+	}
+
     .menu-toggle {
     	position: relative;
     	float: right; 
@@ -590,7 +595,7 @@ a:active {
 
 @media screen and (max-width: 600px) {
 	.main-navigation {
-		padding-top: 64px;
+		margin-top: 0px;
 	}
 }
 
@@ -873,18 +878,21 @@ a:focus.page-numbers{
 }
 
 .logo-box {
-	position: absolute;
-	position: absolute;
-	top: 10px;
-	left: 20px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 8px;
+	margin-left: 20px; 
 	z-index: 1;
 }
 
 .title-box {
-	position: absolute;
-	position: absolute;
-	top: 18px;
-	left: 20px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 16px;
+	//margin-bottom: 48px;
+	margin-left: 20px; 
 	z-index: 1;
 }
 
@@ -899,8 +907,8 @@ a:focus.page-numbers{
 
 .site-description {
     font-weight: 300;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     line-height: normal;
 }
 
@@ -913,6 +921,7 @@ a:focus.page-numbers{
 }
 
 .header-area {
+	position: relative;
 	background: #313131;
     background: hsl(0, 0%, 19%); 
     margin-top: 4rem; 

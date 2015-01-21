@@ -12,7 +12,7 @@ function pho_custom_header_setup() {
 		'default-text-color'     => '000',
 		'width'                  => 300,
 		'height'                 => 64,
-		'flex-width'             => false,
+		'flex-width'             => true,
 		'flex-height'            => false,
 		'wp-head-callback'       => 'pho_header_style',
 		'admin-head-callback'    => 'pho_admin_header_style',
