@@ -1115,7 +1115,7 @@ a:focus.page-numbers{
 .footer-widgets .widget {
     float: left;
     width: 50%;
-    padding: 0 2rem 8rem 2rem;
+    padding: 0 2rem 4rem 2rem;
 }
 
 /* Footer widgets responsive */
@@ -1129,7 +1129,7 @@ a:focus.page-numbers{
     .footer-widgets .widget {
         float: left;
         width: 25%;
-        padding: 0 2rem 8rem 2rem;
+        padding: 0 2rem 4rem 2rem;
     }
 }
 
@@ -1139,7 +1139,7 @@ a:focus.page-numbers{
     .footer-widgets .widget {
         float: none;
         width: 100%;
-        padding: 0 2rem 8rem 2rem;
+        padding: 0 2rem 4rem 2rem;
     }
 }
 
@@ -2038,4 +2038,6 @@ object { max-width: 100%; }
 	text-align: center;
 	font-size: 14px; 
 	font-size: 1.4rem;
+	padding-bottom: 40px;
+	padding-bottom: 4rem;
 }
