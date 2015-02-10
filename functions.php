@@ -87,7 +87,7 @@ function pho_setup() {
 		'search-form',
 		'comment-form',
 		'gallery',
-                'caption',
+        'caption',
 	) );
 }
 endif; // pho_setup

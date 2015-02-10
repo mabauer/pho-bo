@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<div class="header-area">
-	<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header" role="banner">
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'pho' ); ?></a>
 
 		
@@ -41,10 +41,7 @@
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 					<?php endif; ?>
 				</div><!-- end #titlebox -->
-				<?php endif; ?>
-				
-			
-				
+				<?php endif; ?>				
 				
 			</div><!-- end #site-header -->
 			<nav id="site-navigation" class="main-navigation clear" role="navigation">
@@ -70,8 +67,7 @@
 					<?php get_search_form(); ?>
 				</div>
 			</div>
-		
-		
-	</header><!-- #masthead -->
+			
+		</header><!-- #masthead -->
 	</div> <!-- #header-area -->
 	<div id="content" class="site-content">

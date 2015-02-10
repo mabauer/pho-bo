@@ -15,7 +15,7 @@ jQuery(function($){
    });
    
    var sf;
-var breakpoint = 600;
+   var breakpoint = 600;
    sf = $('ul.nav-menu');
     if($(document).width() >= breakpoint){
         sf.superfish({
