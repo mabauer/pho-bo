@@ -132,6 +132,7 @@ function pho_scripts() {
 
         if (is_page_template('page-templates/page-nosidebar.php') 
         	|| is_page_template('page-templates/portfolio.php')
+        	|| is_page_template('page-templates/slideshow.php')
         	|| ! is_active_sidebar( 'sidebar-1' )) {
             wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/no-sidebar.css' );
         } else {
@@ -171,6 +172,17 @@ function pho_scripts() {
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
+		}
+		
+		if (!is_admin()) {
+
+			// Enqueue Supersized JavaScript
+			wp_register_script('jquery_supersized', get_template_directory_uri(). '/js/supersized.min.js', array('jquery') );
+			wp_enqueue_script('jquery_supersized');
+
+			// Enqueue Supersized Stylesheet		
+			wp_register_style( 'supersized-style', get_template_directory_uri() . '/inc/supersized.css', 'all' );
+			wp_enqueue_style( 'supersized-style' );
 		}
 }
 add_action( 'wp_enqueue_scripts', 'pho_scripts' );
