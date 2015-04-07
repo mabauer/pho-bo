@@ -960,6 +960,12 @@ a:focus.page-numbers{
     .site-branding { padding: 0; }
 }
 
+@media screen and (max-width: 400px) {
+	.logo-box {
+		display: none;
+	}	
+}   
+
 /* Header search */
 
 .search-toggle {
