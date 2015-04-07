@@ -920,12 +920,12 @@ a:focus.page-numbers{
     color: hsl(0, 0%, 100%);
 }
 
-.header-area {
+.header-bar {
 	position: relative;
 	background: #313131;
     background: hsl(0, 0%, 19%); 
     margin-top: 4rem; 
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
 }
 
 .header-image img {
@@ -949,7 +949,7 @@ a:focus.page-numbers{
    Move it right to the top on small screens */
    
 @media screen and (max-width: 900px) {
-	.header-area {
+	.header-bar {
 		margin-top: 0rem;
 		margin-bottom: 0rem;
 	}	
@@ -989,10 +989,13 @@ a:focus.page-numbers{
     top: 0;
     right: 0;
 }
-.search-box-wrapper {
-    z-index: 2;
-    width: 100%;
+
+.search-bar {
+	z-index: 2;
+	background: #4d4d4d;
+    background: hsl(0, 0%, 30%);
 }
+
 .search-box {
 	float: right;
 	margin-right: 2rem;
@@ -1913,7 +1916,7 @@ a.author-link {
 11.8 Slide show view
 --------------------------------------------------------------*/
 
-.slideshow .header-area {
+.slideshow .header-bar {
 	position: fixed;
 	width: 100%;
 	min-height: 82px;
@@ -1992,7 +1995,7 @@ a.author-link {
 }
 
 @media screen and (max-width: 600px) {
-	.slideshow .header-area {
+	.slideshow .header-bar {
 		bottom: 0rem;
 	}
 

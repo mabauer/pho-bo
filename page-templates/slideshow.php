@@ -30,7 +30,7 @@
 
 <div id="page" class="slideshow site">
 
-	<div class="header-area">
+	<div class="header-bar">
 		<header id="masthead" class="site-header" role="banner">
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'pho' ); ?></a>
 
@@ -80,7 +80,7 @@
 			</nav><!-- #site-navigation -->
 
 		</header><!-- #masthead -->
-	</div> <!-- #header-area -->
+	</div> <!-- #header-bar -->
 	
 	<!-- Clickable areas on the slides for some basic navigation -->
 	<div id="clickable_area" class="clickable_area_wrapper">

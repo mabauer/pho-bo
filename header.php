@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<div class="header-area">
+	<div class="header-bar">
 		<header id="masthead" class="site-header" role="banner">
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'pho' ); ?></a>
 
@@ -62,12 +62,16 @@
 								
 			</nav><!-- #site-navigation -->
 
-			<div id="header-search-container" class="search-box-wrapper clear hide">
+		</header><!-- #masthead -->
+
+	</div> <!-- #header-bar -->
+	
+	<div class="search-bar">
+		<div id="header-search-container" class="search-box-wrapper clear hide">
 				<div class="search-box clear">
 					<?php get_search_form(); ?>
 				</div>
-			</div>
-			
-		</header><!-- #masthead -->
-	</div> <!-- #header-area -->
+		</div>
+	</div>
+	
 	<div id="content" class="site-content">

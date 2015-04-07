@@ -94,6 +94,12 @@ Layout: Sidebar right
     background: hsl(0, 0%, 100%);
 }
 
+.search-box-wrapper {
+    z-index: 2;
+    width: 100%;
+    max-width: 880px;
+    margin: auto;
+}
 
 @media screen and (min-width: 1280px) {
 	.site-header {
@@ -120,6 +126,13 @@ Layout: Sidebar right
     .comments-area,
     .paging-navigation,
     .author-index { margin-right: 0; }
+
+	.search-box-wrapper {
+    	z-index: 2;
+    	width: 100%;
+    	max-width: 1280px;
+    	margin: auto;
+    }
     
 }
 
