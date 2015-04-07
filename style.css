@@ -2128,6 +2128,7 @@ object { max-width: 100%; }
 /* Featured Images */
 
 .thumbnail-box {
+	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
 
