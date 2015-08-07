@@ -58,14 +58,15 @@
 			<nav id="slideshow-navigation" class="slideshow-navigation clear" role="navigation">
 	
 				<div id="enter_button" class="goto_button slideshow-navbutton">
-					<i class="fa fa-sign-in"></i>
+					<i class="fa fa-times"></i>
 					<a href="<?php echo $blog_page ?>" class="screen-reader-text"><?php _e( 'Enter', 'pho' ); ?></a>
 				</div>	
-
-				<div id="about_button" class="goto_button slideshow-navbutton">
+				
+				<!-- <div id="about_button" class="goto_button slideshow-navbutton">
 					<i class="fa fa-info-circle"></i>
-					<a href="http://local.wordpress.dev/?page_id=5" class="screen-reader-text"><?php _e( 'Enter', 'pho' ); ?></a>
+					<a href="http://local.wordpress.dev/about" class="screen-reader-text"><?php _e( 'About', 'pho' ); ?></a>
 				</div>
+				-->
 				
 				<div id="next_button" class="slideshow-navbutton">
 					<i class="fa fa-arrow-circle-o-right"></i>
