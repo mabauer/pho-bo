@@ -8,24 +8,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
-    <?php 
-    	if (has_post_thumbnail()) {
-			echo '<div class="thumbnail-box clear">';
-			pho_the_responsive_thumbnail( get_the_ID() );
-			echo '</div>';
-    	}
-    ?>
+    
 
 	<header class="entry-header clear">
+	
+		<?php 
+			if (has_post_thumbnail()) {
+				echo '<div class="thumbnail-box clear">';
+				pho_the_responsive_thumbnail( get_the_ID() );
+				echo '</div>';
+			}
+		?>
             
-            <?php
-                /* translators: used between list items, there is a space after the comma */
-                $category_list = get_the_category_list( __( ', ', 'pho' ) );
+		<?php
+			/* translators: used between list items, there is a space after the comma */
+			$category_list = get_the_category_list( __( ', ', 'pho' ) );
 
-                if ( pho_categorized_blog() ) {
-                    echo '<div class="category-list">' . $category_list . '</div>';
-                }
-            ?>
+			if ( pho_categorized_blog() ) {
+				echo '<div class="category-list">' . $category_list . '</div>';
+			}
+		?>
+		
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
