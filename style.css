@@ -1525,6 +1525,11 @@ blockquote cite {
 
 .entry-footer i { margin-right: .5rem; }
 
+.entry-box p {
+	margin-bottom: 0em;
+	display: inline;
+}
+
 /*--------------------------------------------------------------
 11.2 Index and Archive
 --------------------------------------------------------------*/
@@ -1544,7 +1549,8 @@ blockquote cite {
 }
 
 .continue-reading {
-    margin: 0 4rem;
+    margin: 0 0rem;
+    display: inline;
     font-weight: 900;
     font-size: 16px;
     font-size: 1.6rem;
@@ -2101,12 +2107,37 @@ object { max-width: 100%; }
 /* Featured Images */
 
 .thumbnail-box {
-	margin: 2rem;
+	margin: 2rem; 
 }
 
 .thumbnail-box img {
     display: block;
     margin: 0 auto;
+}
+
+/* Larger screens get featured images as "side teasers" */
+@media screen and (min-width: 880px) {
+
+	.thumbnail-box.side-teaser {
+		float: left;
+		max-width: 280px;
+	}
+	
+	.entry-box.side-teaser {
+		float: right;
+		max-width: 560px;
+		width: 100%;
+		margin: 0px;
+	}
+	
+	.entry-box.side-teaser .entry-title,
+	.entry-box.no-teaser .entry-title {
+		margin: 0 0 1rem;
+		font-size: 2.8rem;
+		font-size: 28px;
+	}
+	
+	
 }
 
 /*--------------------------------------------------------------
