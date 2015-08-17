@@ -56,7 +56,7 @@
 
 	<footer class="entry-footer">
 		<?php
-			echo get_the_tag_list( '<ul><li><i class="fa fa-tag"></i>', '</li><li><i class="fa fa-tag"></i>', '</li></ul>' );
+			echo get_the_tag_list( '<ul class="tag-list"><li><i class="fa fa-tag"></i>', '</li><li><i class="fa fa-tag"></i>', '</li></ul>' );
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

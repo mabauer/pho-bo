@@ -31,25 +31,6 @@ add_action( 'customize_preview_init', 'pho_customize_preview_js' );
 
 function pho_register_theme_customizer( $wp_customize ) {
 
-    $wp_customize->add_setting(
-        'pho_header_color',
-        array(
-            'default'     => '#0587BF',
-            'sanitize_callback'    => 'sanitize_hex_color'
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'header_color',
-            array(
-                'label'      => __( 'Header Color', 'pho' ),
-                'section'    => 'colors',
-                'settings'   => 'pho_header_color'
-            )
-        )
-    );
 
     $wp_customize->add_setting(
         'pho_link_color',
@@ -124,22 +105,14 @@ function pho_sanitize_archive( $value ) {
 }
 
 function pho_customizer_css() {
-	/*
     ?>
     	<style type="text/css">
-        .site-branding {
-            background: <?php echo get_theme_mod( 'pho_header_color' ); ?>;
-        }
-
-        .category-list a:hover,
-        .entry-meta a:hover,
-        .tag-links a:hover,
-        .widget-area a:hover,
-        .nav-links a:hover,
-        .comment-meta a:hover,
+ 
+        .nav-links a,
         .continue-reading a,
-        .entry-title a:hover,
         .entry-content a,
+        .edit-link a,
+        .comments-link a,
         .comment-content a {
             color: <?php echo get_theme_mod( 'pho_link_color' ); ?>;
         }
@@ -151,6 +124,13 @@ function pho_customizer_css() {
     </style>
     
     <?php
-    */
+    	/*
+    	.category-list a,
+        .tag-list a,
+        .tag-list .fa {
+	        color: <?php echo get_theme_mod( 'pho_link_color' ); ?>;
+    	    }
+ 		*/
+    
 }
 add_action( 'wp_head', 'pho_customizer_css' );
