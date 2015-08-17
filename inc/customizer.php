@@ -64,6 +64,24 @@ function pho_register_theme_customizer( $wp_customize ) {
         )
     );
         
+    $wp_customize->add_setting(
+        'pho_show_post_separators',
+        array( 
+			'default' => 1 
+		)
+    );
+
+    $wp_customize->add_control(
+        'pho_show_post_separators',
+		array(
+            'type' => 'checkbox',
+            'label' => __( 'Show separators between posts', 'pho' ),
+            'description' => __( 'Display separators between posts on blog index and archive pages -- recommended when the background is white', 'pho' ),
+            'section' => 'option_section'
+        )
+    );
+
+
     // Archive content display
     $wp_customize->add_setting(
         // ID
@@ -75,6 +93,7 @@ function pho_register_theme_customizer( $wp_customize ) {
             'sanitize_callback' => 'pho_sanitize_archive'
         )
     );
+    
     $wp_customize->add_control(
 	// ID
 	'archive_control',

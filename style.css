@@ -1558,6 +1558,14 @@ blockquote cite {
 
 .continue-reading i { margin-left: .5em; }
 
+.post .separator {
+	margin: 0rem 2rem;
+    border-bottom-width: 1px;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    clear: both;
+}
+
 .search-no-results .content-area,
 .error404 .content-area { margin-top: 4rem; }
 

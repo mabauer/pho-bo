@@ -89,7 +89,7 @@
 						}
 					?>
 				</div> <!-- .continue-reading -->
-			</div><!-- .entry-content -->
+			</div> <!-- .entry-content -->
             
             
 						
@@ -113,5 +113,12 @@
         <?php } ?>
         
 		</div> <!-- entry-box -->
+				
     </div> <!-- index-box -->
+    
+	<?php if (get_theme_mod( 'pho_show_post_separators' ) == 1 ) { ?>
+		<div class="separator">
+    	</div>
+    <?php } ?>
+	
 </article><!-- #post-## -->
