@@ -8,17 +8,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
-    
-
-	<header class="entry-header clear">
-	
-		<?php 
+    <?php 
 			if (has_post_thumbnail()) {
 				echo '<div class="thumbnail-box clear">';
 				pho_the_responsive_thumbnail( get_the_ID() );
 				echo '</div>';
 			}
 		?>
+
+	<header class="entry-header clear">
+	
+		
             
 		<?php
 			/* translators: used between list items, there is a space after the comma */
