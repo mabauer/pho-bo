@@ -91,7 +91,7 @@ Layout: Sidebar right
     max-width: 88rem;
     width: 100%;
     padding: 0rem 0rem 2rem 0rem;
-    margin: 0 auto 2em;
+    margin: 0 auto 0rem;
     background: #fff;
     background: hsl(0, 0%, 100%);
 }
