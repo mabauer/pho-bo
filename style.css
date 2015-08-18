@@ -2144,8 +2144,13 @@ object { max-width: 100%; }
 		font-size: 2.8rem;
 		font-size: 28px;
 	}
-	
-	
+		
+}
+
+@media screen and (max-width: 680px) {
+	.thumbnail-box {
+		margin: 2rem 0rem 0rem; 
+	}
 }
 
 /*--------------------------------------------------------------
