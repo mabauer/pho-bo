@@ -25,13 +25,13 @@ function pho_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'pho_customize_preview_js' );
 
-/**
- * Add custom heading background color and site-wide link color
- */
+
 
 function pho_register_theme_customizer( $wp_customize ) {
 
-
+   /**
+    * Add site-wide link color
+    */
     $wp_customize->add_setting(
         'pho_link_color',
         array(
@@ -52,9 +52,62 @@ function pho_register_theme_customizer( $wp_customize ) {
         )
     );
     
-    // Additional theme options: archive display with excerpts...
+	/**
+	 * Class to create a custom tags control
+	 */
+	class Tags_Dropdown_Custom_Control extends WP_Customize_Control
+	{
+	
+		public $type = 'select';
+		
+		private $tags = false;
+
+		public function __construct($manager, $id, $args = array(), $options = array())
+		{
+			$this->tags = get_tags($options);
+
+			parent::__construct( $manager, $id, $args );
+		}
+
+		/**
+		* Render the content on the theme customizer page
+		*/
+		public function render_content()
+		{
+			if(empty($this->tags))
+			{
+				return false;
+			}
+			?>
+				<label>
+					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+					<span class="description customize-control-description"> <?php echo esc_html( $this->description ); ?></span>
+					<select name="<?php echo $this->id; ?>" id="<?php echo $this->id; ?>" <?php $this->link(); ?>>
+					<?php
+						foreach ( $this->tags as $tag )
+						{
+							printf('<option value="%s" %s>%s</option>',
+								$tag->name,
+								selected($this->value(), $tag->term_id, false),
+								$tag->name);
+						}
+					?>
+					</select>
+					
+				</label>
+			<?php
+		}
+	}
+
+    
+    /* 
+     * Additional theme options: 
+     * 	- separators/lines between posts	
+     *  - archive display with excerpts
+     *  - determine tag to identify teaser images
+     *
+     */
     $wp_customize->add_section(
-	// ID
 	'option_section',
 	// Arguments array
 	array(
@@ -63,7 +116,34 @@ function pho_register_theme_customizer( $wp_customize ) {
             'description' => __( 'Change the default display options for the theme.', 'pho' )
         )
     );
-        
+    
+     // Archive content display
+    $wp_customize->add_setting(
+        'archive_setting',
+        array(
+            'default' => 'excerpt',
+            'type' => 'option',
+            'sanitize_callback' => 'pho_sanitize_archive'
+        )
+    );
+    
+    $wp_customize->add_control(
+	'archive_control',
+	array(
+            'type' => 'radio',
+            'label' => __( 'Archive display', 'pho' ),
+            'description' => __( 'Display excerpts or full content with optional "More" tag in the blog index and archive pages.', 'pho' ),
+            'section' => 'option_section',
+            'choices' => array(
+                'excerpt' => __( 'Excerpt', 'pho' ),
+                'content' => __( 'Full content', 'pho' )
+            ),
+            // This last one must match setting ID from above
+            'settings' => 'archive_setting'
+        )
+    );
+
+	// Post separators        
     $wp_customize->add_setting(
         'pho_show_post_separators',
         array( 
@@ -81,34 +161,24 @@ function pho_register_theme_customizer( $wp_customize ) {
         )
     );
 
-
-    // Archive content display
+    // Tag for posts with teasers        
     $wp_customize->add_setting(
-        // ID
-        'archive_setting',
-        // Arguments array
-        array(
-            'default' => 'excerpt',
-            'type' => 'option',
-            'sanitize_callback' => 'pho_sanitize_archive'
-        )
+        'pho_featured_post_tag',
+        array( 
+			'default' => 'featured' 
+		)
     );
-    
+
     $wp_customize->add_control(
-	// ID
-	'archive_control',
-	// Arguments array
-	array(
-            'type' => 'radio',
-            'label' => __( 'Archive display', 'pho' ),
-            'description' => __( 'Display excerpts or full content with optional "More" tag in the blog index and archive pages.', 'pho' ),
-            'section' => 'option_section',
-            'choices' => array(
-                'excerpt' => __( 'Excerpt', 'pho' ),
-                'content' => __( 'Full content', 'pho' )
-            ),
-            // This last one must match setting ID from above
-            'settings' => 'archive_setting'
+		 new Tags_Dropdown_Custom_Control(
+            $wp_customize,
+            'pho_featured_post_tag',
+            array(
+                'label'      => __( 'Tag for featured posts', 'pho' ),
+                'description' => __( 'Tag to identify featured posts (which are displayed with large teaser images).', 'pho' ),
+                'section'    => 'option_section',
+                'settings' => 'pho_featured_post_tag'
+            )
         )
     );
 

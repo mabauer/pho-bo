@@ -7,12 +7,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
  
  	<?php
+ 	
+ 		$featured_tag = get_theme_mod('pho_featured_post_tag');
+		if ('' == $featured_tag) {
+			$featured_tag = 'featured';
+		} 
 
 		// On larger screens, featured posts will be displayed with large images,...
 		// ... normal ones get side teasers. 
 		$teaser = 'no-teaser';	
  		if (has_post_thumbnail()) {
- 			if (has_tag('featured') || is_sticky()) {
+ 			if (has_tag($featured_tag) || is_sticky()) {
  				$teaser = 'large-teaser';
  			}
  			else {
