@@ -128,6 +128,7 @@ function pho_customizer_css() {
     	<style type="text/css">
  
         .nav-links a,
+        .nav-links h1,
         .continue-reading a,
         .entry-content a,
         .edit-link a,
