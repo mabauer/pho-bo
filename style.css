@@ -2045,7 +2045,7 @@ object { max-width: 100%; }
 	
 	.entry-box.side-teaser {
 		float: right;
-		max-width: 560px;
+		max-width: 540px;
 		width: 100%;
 		margin: 0px;
 	}
