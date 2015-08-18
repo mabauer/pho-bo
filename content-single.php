@@ -11,7 +11,10 @@
     <?php 
 			if (has_post_thumbnail()) {
 				echo '<div class="thumbnail-box clear">';
+				$attachment_url = get_permalink(get_post_thumbnail_id(get_the_ID())) ;
+				echo '<a href=' . $attachment_url . '>';
 				pho_the_responsive_thumbnail( get_the_ID() );
+				echo '</a>';
 				echo '</div>';
 			}
 		?>
