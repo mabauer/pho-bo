@@ -98,7 +98,7 @@
 	<?php 
 		$slide_tag = get_post_meta($post->ID, 'slide_tag', true); 
 		if ('' == $slide_tag) 
-			$slide_tag = 'featured';	
+			$slide_tag = 'slideshow';	
 	?>	
 	<?php global $data; ?>
 	<?php $data = array(); ?>
