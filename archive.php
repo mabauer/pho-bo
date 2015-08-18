@@ -38,9 +38,6 @@ get_header(); ?>
 						elseif ( is_year() ) :
 							printf( _x( 'Posts from %s', 'archive for a year', 'pho' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'pho' ) ) . '</span>' );
 
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'pho' );
-
 						else :
 							_e( 'Archives', 'pho' );
 

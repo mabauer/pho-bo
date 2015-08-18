@@ -71,9 +71,6 @@ function pho_setup() {
 	// Reverse the order of the menu items
 	//add_filter( 'wp_nav_menu_objects', create_function( '$menu', 'return array_reverse( $menu );' ) );
 
-	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside' ) );
-
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'pho_custom_background_args', array(
 		'default-color' => 'b2b2b2',

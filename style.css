@@ -3,13 +3,13 @@ Theme Name: pho-bo
 Theme URI: http://mkbauer.de/pho-bo
 Author: Markus Bauer
 Author URI: http://mkbauer.de/
-Description: pho bo is a responsive, accessible, high-resolution theme featuring large images, and easy to read typography that scales to fit all screens. Other features include keyboard accessible navigation, optional social menu, sidebar- and footer widgets, no-sidebar page template, Aside post format, and collapsible author profile box. pho is translation ready and ships in English with translations in Catalan, Chinese (simplified), Dutch, Finnish, French, German, Hungarian, Italian, Norwegian Bokmål, Persian, Russian, Spanish, Swedish, and Turkish.
+Description: pho bo is a responsive, accessible, high-resolution theme featuring large images, and easy to read typography that scales to fit all screens. Other features include keyboard accessible navigation, sidebar- and footer widgets, no-sidebar page template, and collapsible author profile box. pho-bo is translation ready and ships in English with translations in Catalan, Chinese (simplified), Dutch, Finnish, French, German, Hungarian, Italian, Norwegian Bokmål, Persian, Russian, Spanish, Swedish, and Turkish.
 Version: 0.1
 License: GNU General Public License
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pho
 Domain Path: /languages/
-Tags: white, black, light, one-column, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments, translation-ready, rtl-language-support
+Tags: white, black, light, one-column, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-menu, editor-style, featured-images, microformats, sticky-post, threaded-comments, translation-ready, rtl-language-support
 
 pho bo is based on mor10's Simone theme http://mor10.com/simone-wordpress-theme/, (C) 2014 Morten Rand-Hendriksen
 Simone in turn based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
@@ -40,11 +40,12 @@ and Blueprint http://www.blueprintcss.org/
 10.0 - Widgets
 11.0 - Content
 	11.1 - Posts and pages
-        11.2 - Index and Archives
-	11.3 - Asides
-        11.4 - Image Attachments
-	11.5 - Comments
-        11.6 - Author Box
+    11.2 - Index and Archives
+    11.3 - Image Attachments
+	11.4 - Comments
+    11.5 - Author Box
+    11.6 - Portfolio
+    11.7 - Slideshow
 12.0 - Infinite scroll
 13.0 - Media
 14.0 - Footer
@@ -1486,12 +1487,7 @@ blockquote cite {
 .error404 .content-area { margin-top: 4rem; }
 
 /*--------------------------------------------------------------
-11.3 Asides
---------------------------------------------------------------*/
-.format-aside .entry-content { margin-top: 1em; }
-
-/*--------------------------------------------------------------
-11.4 Image Attachments
+11.3 Image Attachments
 --------------------------------------------------------------*/
 
 .attachment .entry-title { margin-top: .7em; }
@@ -1511,7 +1507,7 @@ blockquote cite {
 
 
 /*--------------------------------------------------------------
-11.5 Comments
+11.4 Comments
 --------------------------------------------------------------*/
 .comments-title {
     font-weight: 900;
@@ -1615,7 +1611,7 @@ ol.children { list-style-type: none; }
 .required { color: red; }
 
 /*--------------------------------------------------------------
-11.6 Author Box
+11.5 Author Box
 --------------------------------------------------------------*/
 .reveal-bio {
     max-width: 880px;
@@ -1713,7 +1709,7 @@ a.author-link {
 }
 
 /*--------------------------------------------------------------
-11.7 Portfolio view
+11.6 Portfolio view
 --------------------------------------------------------------*/
 
 /* Portfolio is responsive */
@@ -1816,7 +1812,7 @@ a.author-link {
 }
 
 /*--------------------------------------------------------------
-11.8 Slide show view
+11.7 Slide show view
 --------------------------------------------------------------*/
 
 .slideshow .header-bar {
