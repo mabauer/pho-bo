@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pho\n"
-"POT-Creation-Date: 2014-08-10 17:08-0800\n"
-"PO-Revision-Date: 2014-08-13 13:22-0600\n"
+"POT-Creation-Date: 2015-08-18 11:37+0200\n"
+"PO-Revision-Date: 2015-08-18 11:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: lynda.com <mrh@lynda.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -18,13 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. translators: %s = single category title
 #: archive.php:22
 #, php-format
 msgid "Posts in the %s category:"
 msgstr "Entradas en la categoría %s"
 
-#. translators: %s = single tag title
 #: archive.php:26
 #, php-format
 msgid "Posts with the %s tag"
@@ -40,6 +38,11 @@ msgstr "Autor: %s"
 msgctxt "archive for a day"
 msgid "Posts from %s"
 msgstr "Entradas de %s"
+
+#: archive.php:33
+msgctxt "Daily archives date format"
+msgid "F j, Y"
+msgstr ""
 
 #: archive.php:36
 #, php-format
@@ -95,8 +98,8 @@ msgstr "Nuevos Comentarios"
 msgid "Comments are closed."
 msgstr "Comentarios cerrados"
 
-#: content-aside.php:17 content-page.php:32 content-single.php:42
-#: content.php:61
+#: content-aside.php:17 content-page.php:32 content-single.php:43
+#: content.php:107
 msgid "Edit"
 msgstr "Editar"
 
@@ -104,7 +107,6 @@ msgstr "Editar"
 msgid "Page not available"
 msgstr "Pagina no disponible"
 
-#. translators: %s = search query
 #: content-none.php:20
 #, php-format
 msgid "Nothing found for %s"
@@ -149,49 +151,52 @@ msgstr ""
 msgid "Most recent posts:"
 msgstr "Entradas recientes:"
 
-#: content-page.php:27 content-single.php:50 image.php:48
+#: content-page.php:27 content-single.php:51 image.php:48
 msgid "Pages:"
 msgstr "Páginas:"
 
-#. translators: used between list items, there is a space after the comma
-#: content-single.php:25 content.php:43
+#: content-portfolio.php:15
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-single.php:25 content.php:49
 msgid ", "
 msgstr ","
 
-#: content-single.php:38 content.php:57
+#: content-single.php:39 content.php:103
 msgid "Leave a comment"
 msgstr "Deja un comentario"
 
-#: content-single.php:38 content.php:57
+#: content-single.php:39 content.php:103
 msgid "1 Comment"
 msgstr "1 Comentario"
 
-#: content-single.php:38 content.php:57
+#: content-single.php:39 content.php:103
 msgid "% Comments"
 msgstr "% Comentarios"
 
-#: content.php:13 content.php:26
+#: content.php:32
 msgid "Read "
 msgstr "Leer"
 
-#: content.php:72
+#: content.php:67 content.php:84
 msgctxt "First part of \"Read *article title* in title tag of Read more link"
 msgid "Read "
 msgstr "Leer"
 
-#: content.php:72
+#: content.php:68 content.php:85
 msgid "Read <span aria-hidden=\"true\">the article</span>"
 msgstr "Leer"
 
-#: content.php:79
+#: content.php:87
 msgid "Continue Reading "
 msgstr "Seguir leyendo"
 
-#: content.php:79
-msgid "Continue Reading"
-msgstr "Seguir leyendo"
+#: content.php:88
+msgid "More"
+msgstr ""
 
-#. translators: %s = text link: WordPress, URL: http://wordpress.org/
 #: footer.php:20
 #, php-format
 msgid "Proudly powered by %s"
@@ -201,48 +206,39 @@ msgstr "Con la tecnología de %s"
 msgid "WordPress"
 msgstr "WordPress"
 
-#. translators: %1$s = text link: pho, URL: http://wordpress.org/themes/pho/, %2$s = text link: mor10.com, URL: http://mor10.com/
 #: footer.php:27
 #, php-format
 msgid "Theme: %1$s by %2$s"
 msgstr "Tema: %1$s por %2$s"
 
 #: footer.php:29
-msgid "mor10.com"
-msgstr "mor10.com"
+msgid "Markus Bauer"
+msgstr ""
 
-#: functions.php:55
+#: functions.php:68
 msgid "Primary Menu"
 msgstr "Menu Principal"
 
-#: functions.php:56
-msgid "Social Menu"
-msgstr "Menu Social"
-
-#: functions.php:85
+#: functions.php:100
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
-#: functions.php:94
+#: functions.php:109
 msgid "Footer Widgets"
 msgstr "Widget Pie de página"
 
-#: functions.php:95
+#: functions.php:110
 msgid ""
 "Footer widgets area appears, not surprisingly, in the footer of the site."
 msgstr ""
 "Los widgets del pie de página aparecen, sin sorpresas, en el pie de página "
 "del sitio web."
 
-#: header.php:25
+#: header.php:25 page-templates/slideshow.php:35
 msgid "Skip to content"
 msgstr "Ir al contenido"
 
-#: header.php:47
-msgid "Menu"
-msgstr "Menú"
-
-#: header.php:53
+#: header.php:51 header.php:56
 msgid "Search"
 msgstr "Buscar"
 
@@ -267,12 +263,10 @@ msgstr "Ocultar Información del Autor"
 msgid "About %s"
 msgstr "Sobre %s"
 
-#. translators: May be followed by another sentence. There is a space after the punctuation mark.
 #: inc/author-box.php:29
 msgid "One article and counting. "
 msgstr "Un artículo y contando "
 
-#. translators: May be followed by another sentence. There is a space after the punctuation mark.
 #: inc/author-box.php:34
 #, php-format
 msgid "%s articles and counting. "
@@ -315,18 +309,62 @@ msgstr "Facebook"
 msgid "All posts by %s"
 msgstr "Todas las entradas por %s"
 
-#: inc/customizer.php:46
-msgid "Header Color"
-msgstr "Color de la cabecera"
-
-#: inc/customizer.php:65
+#: inc/customizer.php:48
 msgid "Link Color"
 msgstr "Color de hipervínculos"
+
+#: inc/customizer.php:61
+msgid "Theme Options"
+msgstr "Optiones"
+
+#: inc/customizer.php:63
+msgid "Change the default display options for the theme."
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "Show separators between posts"
+msgstr ""
+
+#: inc/customizer.php:79
+msgid ""
+"Display separators between posts on blog index and archive pages -- "
+"recommended when the background is white"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "Archive display"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid ""
+"Display excerpts or full content with optional \"More\" tag in the blog "
+"index and archive pages."
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "Excerpt"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "Full content"
+msgstr ""
 
 #: inc/extras.php:63
 #, php-format
 msgid "Page %s"
 msgstr "Página %s"
+
+#: inc/social-widget.php:27
+msgid "Show icons with links to your social profiles"
+msgstr ""
+
+#: inc/social-widget.php:29
+msgid "Social Links (pho)"
+msgstr ""
+
+#: inc/social-widget.php:73
+msgid "Title:"
+msgstr ""
 
 #: inc/template-tags.php:45
 msgid "&larr; Previous"
@@ -376,15 +414,58 @@ msgctxt ""
 "mobile-hide class is used to hide connecting elements like \"on\" and \".\" "
 "on wider screens."
 msgid ""
-"<span class=\"byline\">Written by %1$s</span><span class=\"mobile-hide\"> on "
-"</span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide\">.</"
+"<span class=\"byline\">by %1$s</span><span class=\"mobile-hide\"> on </"
+"span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide\">.</"
 "span>"
 msgstr ""
-"<span class=\"byline\">Escrito por %1$s</span><span class=\"mobile-hide\"> "
-"en </span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide\">."
-"</span>"
+"<span class=\"byline\">de %1$s</span><span class=\"mobile-hide\">  en </"
+"span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide\">.</"
+"span>"
+
+#: page-templates/slideshow.php:62
+msgid "Enter"
+msgstr "Entrar"
+
+#: page-templates/slideshow.php:67
+msgid "About"
+msgstr "Sobre"
+
+#: page-templates/slideshow.php:73
+msgid "Next"
+msgstr "Imagen Siguiente"
+
+#: page-templates/slideshow.php:78
+msgid "Previous"
+msgstr "Imagen Anterior"
 
 #: search.php:16
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Resultados de la búsqueda: %s"
+
+#~ msgid "Continue Reading"
+#~ msgstr "Seguir leyendo"
+
+#~ msgid "mor10.com"
+#~ msgstr "mor10.com"
+
+#~ msgid "Social Menu"
+#~ msgstr "Menu Social"
+
+#~ msgid "Menu"
+#~ msgstr "Menú"
+
+#~ msgid "Header Color"
+#~ msgstr "Color de la cabecera"
+
+#~ msgctxt ""
+#~ "mobile-hide class is used to hide connecting elements like \"on\" and \"."
+#~ "\" on wider screens."
+#~ msgid ""
+#~ "<span class=\"byline\">Written by %1$s</span><span class=\"mobile-hide\"> "
+#~ "on </span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide"
+#~ "\">.</span>"
+#~ msgstr ""
+#~ "<span class=\"byline\">Escrito por %1$s</span><span class=\"mobile-hide"
+#~ "\"> en </span><span class=\"posted-on\">%2$s</span><span class=\"mobile-"
+#~ "hide\">.</span>"

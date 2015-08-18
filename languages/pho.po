@@ -1,30 +1,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pho\n"
-"POT-Creation-Date: 2014-11-07 22:18-0800\n"
-"PO-Revision-Date: 2014-11-07 22:18-0800\n"
+"POT-Creation-Date: 2015-08-18 11:37+0200\n"
+"PO-Revision-Date: 2015-08-18 11:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: lynda.com <mrh@lynda.com>\n"
-"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. translators: %s = single category title
 #: archive.php:22
 #, php-format
 msgid "Posts in the %s category:"
 msgstr ""
 
-#. translators: %s = single tag title
 #: archive.php:26
 #, php-format
 msgid "Posts with the %s tag"
@@ -100,8 +97,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:17 content-page.php:32 content-single.php:42
-#: content.php:61
+#: content-aside.php:17 content-page.php:32 content-single.php:43
+#: content.php:107
 msgid "Edit"
 msgstr ""
 
@@ -109,7 +106,6 @@ msgstr ""
 msgid "Page not available"
 msgstr ""
 
-#. translators: %s = search query
 #: content-none.php:20
 #, php-format
 msgid "Nothing found for %s"
@@ -147,49 +143,52 @@ msgstr ""
 msgid "Most recent posts:"
 msgstr ""
 
-#: content-page.php:27 content-single.php:50 image.php:48
+#: content-page.php:27 content-single.php:51 image.php:48
 msgid "Pages:"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: content-single.php:25 content.php:43
+#: content-portfolio.php:15
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-single.php:25 content.php:49
 msgid ", "
 msgstr ""
 
-#: content-single.php:38 content.php:57
+#: content-single.php:39 content.php:103
 msgid "Leave a comment"
 msgstr ""
 
-#: content-single.php:38 content.php:57
+#: content-single.php:39 content.php:103
 msgid "1 Comment"
 msgstr ""
 
-#: content-single.php:38 content.php:57
+#: content-single.php:39 content.php:103
 msgid "% Comments"
 msgstr ""
 
-#: content.php:13 content.php:26
+#: content.php:32
 msgid "Read "
 msgstr ""
 
-#: content.php:72 content.php:89
+#: content.php:67 content.php:84
 msgctxt "First part of \"Read *article title* in title tag of Read more link"
 msgid "Read "
 msgstr ""
 
-#: content.php:72 content.php:89
+#: content.php:68 content.php:85
 msgid "Read <span aria-hidden=\"true\">the article</span>"
 msgstr ""
 
-#: content.php:91
+#: content.php:87
 msgid "Continue Reading "
 msgstr ""
 
-#: content.php:91
-msgid "Continue Reading"
+#: content.php:88
+msgid "More"
 msgstr ""
 
-#. translators: %s = text link: WordPress, URL: http://wordpress.org/
 #: footer.php:20
 #, php-format
 msgid "Proudly powered by %s"
@@ -199,46 +198,37 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#. translators: %1$s = text link: pho, URL: http://wordpress.org/themes/pho/, %2$s = text link: mor10.com, URL: http://mor10.com/
 #: footer.php:27
 #, php-format
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
 #: footer.php:29
-msgid "mor10.com"
+msgid "Markus Bauer"
 msgstr ""
 
 #: functions.php:68
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:69
-msgid "Social Menu"
-msgstr ""
-
-#: functions.php:98
+#: functions.php:100
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:109
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:110
 msgid ""
 "Footer widgets area appears, not surprisingly, in the footer of the site."
 msgstr ""
 
-#: header.php:25
+#: header.php:25 page-templates/slideshow.php:35
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:47
-msgid "Menu"
-msgstr ""
-
-#: header.php:53
+#: header.php:51 header.php:56
 msgid "Search"
 msgstr ""
 
@@ -263,12 +253,10 @@ msgstr ""
 msgid "About %s"
 msgstr ""
 
-#. translators: May be followed by another sentence. There is a space after the punctuation mark.
 #: inc/author-box.php:29
 msgid "One article and counting. "
 msgstr ""
 
-#. translators: May be followed by another sentence. There is a space after the punctuation mark.
 #: inc/author-box.php:34
 #, php-format
 msgid "%s articles and counting. "
@@ -311,55 +299,61 @@ msgstr ""
 msgid "All posts by %s"
 msgstr ""
 
-#: inc/customizer.php:46
-msgid "Header Color"
-msgstr ""
-
-#: inc/customizer.php:65
+#: inc/customizer.php:48
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:78
+#: inc/customizer.php:61
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer.php:80
+#: inc/customizer.php:63
 msgid "Change the default display options for the theme."
 msgstr ""
 
-#: inc/customizer.php:101
-msgid "Sidebar position"
+#: inc/customizer.php:78
+msgid "Show separators between posts"
 msgstr ""
 
-#: inc/customizer.php:104
-msgid "Left sidebar"
+#: inc/customizer.php:79
+msgid ""
+"Display separators between posts on blog index and archive pages -- "
+"recommended when the background is white"
 msgstr ""
 
-#: inc/customizer.php:105
-msgid "Right sidebar"
-msgstr ""
-
-#: inc/customizer.php:128
+#: inc/customizer.php:103
 msgid "Archive display"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:104
 msgid ""
 "Display excerpts or full content with optional \"More\" tag in the blog "
 "index and archive pages."
 msgstr ""
 
-#: inc/customizer.php:132
+#: inc/customizer.php:107
 msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer.php:133
+#: inc/customizer.php:108
 msgid "Full content"
 msgstr ""
 
 #: inc/extras.php:63
 #, php-format
 msgid "Page %s"
+msgstr ""
+
+#: inc/social-widget.php:27
+msgid "Show icons with links to your social profiles"
+msgstr ""
+
+#: inc/social-widget.php:29
+msgid "Social Links (pho)"
+msgstr ""
+
+#: inc/social-widget.php:73
+msgid "Title:"
 msgstr ""
 
 #: inc/template-tags.php:45
@@ -410,9 +404,25 @@ msgctxt ""
 "mobile-hide class is used to hide connecting elements like \"on\" and \".\" "
 "on wider screens."
 msgid ""
-"<span class=\"byline\">Written by %1$s</span><span class=\"mobile-hide\"> on "
-"</span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide\">.</"
+"<span class=\"byline\">by %1$s</span><span class=\"mobile-hide\"> on </"
+"span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide\">.</"
 "span>"
+msgstr ""
+
+#: page-templates/slideshow.php:62
+msgid "Enter"
+msgstr ""
+
+#: page-templates/slideshow.php:67
+msgid "About"
+msgstr ""
+
+#: page-templates/slideshow.php:73
+msgid "Next"
+msgstr ""
+
+#: page-templates/slideshow.php:78
+msgid "Previous"
 msgstr ""
 
 #: search.php:16
