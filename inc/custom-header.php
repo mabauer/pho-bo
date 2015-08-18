@@ -1,6 +1,6 @@
 <?php
 /**
- * Implement a custom logo for Ubud
+ * Implement a custom logo for Pho-bo
  *
  * @link http://codex.wordpress.org/Custom_Headers
  *

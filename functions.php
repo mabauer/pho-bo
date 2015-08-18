@@ -66,7 +66,6 @@ function pho_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'pho' ),
-                'social' => __( 'Social Menu', 'pho'),
 	) );
 	
 	// Reverse the order of the menu items

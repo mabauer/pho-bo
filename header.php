@@ -50,9 +50,7 @@
 					<i class="fa fa-search"></i>
 					<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'pho' ); ?></a>
 				</div>
-				
-				<?php pho_social_menu(); ?>
-				
+							
 				<h1 class="menu-toggle">
 					<i class="fa fa-bars"></i>
 					<a href="#" class="screen-reader-text"><?php _e( 'Search', 'pho' ); ?></a>
