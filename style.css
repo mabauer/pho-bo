@@ -1981,8 +1981,8 @@ div.sharedaddy h3.sd-title {
     font-size: 14px;
     font-size: 1.4rem;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
-    background: #e5e5e5;
-    background: hsl(0, 0%, 90%);
+	background: #fff;
+	background: hsl(0, 0%, 100%);
 }
 
 .site-main .gallery { margin-bottom: 1.5em; }
