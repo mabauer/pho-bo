@@ -1479,7 +1479,7 @@ blockquote cite {
 
 .continue-reading {
     margin: 0 0rem;
-    display: inline;
+    display: inline-block;
     font-weight: 900;
     font-size: 16px;
     font-size: 1.6rem;
