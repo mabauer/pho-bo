@@ -1975,11 +1975,11 @@ div.sharedaddy h3.sd-title {
     margin: 0 auto;
 }
 
-.wp-caption-text { text-align: center; }
+.wp-caption-text { text-align: left; }
 
 .wp-caption .wp-caption-text,
 .gallery-caption {
-    padding: 0.8075em 1em;
+    padding: 0.8075em 0em;
     font-size: 14px;
     font-size: 1.4rem;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
