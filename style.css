@@ -1775,7 +1775,8 @@ a.author-link {
 	position: relative;
     float: left;
     width: 33%;
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+	margin: 0;
 }
 
 /* Three columns, wide display, more spacing */
@@ -1807,6 +1808,7 @@ a.author-link {
 
     .portfolio-grid .portfolio-element {
         float: none;
+		max-width: 740;
         width: 100%;
         margin: auto;
         padding: 0 2rem 8rem 2rem;
