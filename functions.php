@@ -57,11 +57,14 @@ function pho_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	// Featured image sizes for responsive display
-	// add_image_size('large-thumb', 1280, 9999);
-	add_image_size('medium-thumb', 880, 9999);
+	add_image_size('large-thumb', 1280, 9999);
+	add_image_size('medium-thumb', 1024, 9999);
+	add_image_size('post-thumbnail', 880, 9999);
 	add_image_size('small-thumb', 440, 9999);
-	// Featured image size for small image in archives
-	add_image_size('index-thumb', 700, 700, true);
+
+	// Featured image size for portfolio view
+	add_image_size('portfolio-thumb', 700, 700, true);
+
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -157,8 +160,6 @@ function pho_scripts() {
         wp_enqueue_script( 'pho-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
 
         wp_enqueue_script( 'pho-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20140429', true );
-
-        wp_enqueue_script( 'pho-picturefill', get_template_directory_uri() . '/js/picturefill.min.js', false, '20140512', false );
 
         if (is_single() || is_author() ) {
             	wp_enqueue_script( 'pho-hide', get_template_directory_uri() . '/js/hide.js', array('jquery'), '20140310', true );

@@ -36,12 +36,12 @@
 			echo '<div class="thumbnail-box clear ' . $teaser . '">';
 			echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'pho') . get_the_title() . '" rel="bookmark">';
 
-			pho_the_responsive_thumbnail( get_the_ID() );
+			the_post_thumbnail();
 
 			// For large teaser images, get a 'responsive' image, for side teasers the small one suffices.
 			/* 
 			if ('large-teaser' == $teaser) { 
-				pho_the_responsive_thumbnail( get_the_ID() );
+				the_post_thumbnail();
 			}
 			else {
 				the_post_thumbnail('small-thumb');
