@@ -17,7 +17,7 @@
 		// ... normal ones get side teasers.
 		$teaser = 'no-teaser';
  		if (has_post_thumbnail()) {
- 			if (has_tag($featured_tag) || is_sticky()) {
+ 			if (has_tag($featured_tag) || is_sticky() || ($wp_query->current_post == 0)) {
  				$teaser = 'large-teaser';
  			}
  			else {
