@@ -1988,6 +1988,16 @@ div.sharedaddy h3.sd-title {
 	background: hsl(0, 0%, 100%);
 }
 
+.wp-caption-text p {
+	display: block;
+	margin-bottom: 0em;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-family: 'Helvetica Neue', 'Roboto', sans-serif;
+	background: #fff;
+	background: hsl(0, 0%, 100%);
+}
+
 .site-main .gallery { margin-bottom: 1.5em; }
 
 .gallery-caption {

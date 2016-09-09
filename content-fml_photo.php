@@ -25,7 +25,7 @@
 
             </header><!-- .entry-header -->
 
-                <div class="entry-content">
+                <div class="entry-content wp-caption-text">
 
                     <?php
                         the_excerpt();
