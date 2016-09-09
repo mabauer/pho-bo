@@ -7,6 +7,20 @@
  * @package pho
  */
 
+if (! function_exists( 'pho_paging_nav' ) ) :
+/**
+ * Determines if a post is featured and gets its thumbnail displayed as a large teaser 
+ */
+function pho_is_featured_post() {
+	$featured_tag = get_theme_mod('pho_featured_post_tag');
+	if ('' == $featured_tag) {
+		$featured_tag = 'featured';
+	}
+	return (has_tag($featured_tag));
+}
+
+endif;
+
 if ( ! function_exists( 'pho_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
@@ -101,7 +115,7 @@ function pho_attachment_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'pho' ); ?></h1>
 		<div class="nav-links">
                     <?php
-                        previous_image_link( false, '<div class="nav-previous"><h1>' . __( 'Previous Image', 'pho' ) . '</h1></div>' ); 
+                        previous_image_link( false, '<div class="nav-previous"><h1>' . __( 'Previous Image', 'pho' ) . '</h1></div>' );
                         next_image_link( false, '<div class="nav-next"><h1>' . __( 'Next Image', 'pho' ) . '</h1></div>' );
                     ?>
 		</div><!-- .nav-links -->
@@ -150,7 +164,7 @@ function pho_categorized_blog() {
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
 			'hide_empty' => 1,
-			
+
 			// We only need to know if there is more than one category.
 			'number'     => 2,
 		) );
@@ -188,11 +202,11 @@ add_action( 'save_post',     'pho_category_transient_flusher' );
 function pho_background_style() {
     if ( is_single() && has_post_thumbnail() ) {
         $background_color = get_background_color();
-        
+
         echo '<style type="text/css">';
         echo '.single-post-thumbnail { background-color: #' . $background_color . '; }';
         echo '</style>';
-        
+
     }
 }
 add_action('wp_head', 'pho_background_style');
@@ -252,5 +266,30 @@ function pho_the_attached_image() {
 		esc_url( $next_attachment_url ),
 		wp_get_attachment_image( $post->ID, $attachment_size )
 	);
+}
+endif;
+
+
+if ( ! function_exists( 'pho_generate_calltrace' ) ) :
+/**
+ * Returns a nicely formatted stacktrace for debugging purposes
+ */
+function pho_generate_calltrace()
+{
+   $e = new \Exception();
+   $trace = explode("\n", $e->getTraceAsString());
+   // reverse array to make steps line up chronologically
+   $trace = array_reverse($trace);
+   array_shift($trace); // remove {main}
+   array_pop($trace); // remove call to this method
+   $length = count($trace);
+   $result = array();
+
+   for ($i = 0; $i < $length; $i++)
+   {
+	   $result[] = ($i + 1)  . ')' . substr($trace[$i], strpos($trace[$i], ' ')); // replace '#someNum' with '$i)', set the right ordering
+   }
+
+   return "\t" . implode("\n\t", $result);
 }
 endif;
