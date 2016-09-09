@@ -88,6 +88,7 @@ function pho_setup() {
 		'gallery',
         'caption',
 	) );
+
 }
 endif; // pho_setup
 add_action( 'after_setup_theme', 'pho_setup' );
@@ -183,6 +184,19 @@ function pho_scripts() {
 		}
 }
 add_action( 'wp_enqueue_scripts', 'pho_scripts' );
+
+/**
+ * Include custom Post Type fml_photo for Flickr media on archive pages
+ */
+function pho_add_custom_post_types_to_query( $query ) {
+	if ( !is_admin() && is_archive() && $query->is_main_query() && empty( $query->query_vars['suppress_filters'] )) {
+		$query->set( 'post_type', array(
+			'post',
+			'fml_photo')
+		);
+	}
+}
+add_filter( 'pre_get_posts', 'pho_add_custom_post_types_to_query' );
 
 /**
  * Force IE out its compatibility mode. Either use IE=11 oder IE=edge.

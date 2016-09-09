@@ -1171,6 +1171,7 @@ ul.sociallinks li a:hover {
     line-height: 1.3em;
     color: #000;
     color: hsl(0, 0%, 0%);
+	padding: 1rem 0 0 0;
 }
 
 .page .entry-title { margin-top: .7em; }
@@ -1375,7 +1376,7 @@ blockquote cite {
 
 /* Meta */
 .category-list {
-    margin: 1.3em 0 1em;
+    margin: 1.3em 0 0em;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
     font-size: 16px;
     font-size: 1.6rem;
@@ -1487,7 +1488,7 @@ blockquote cite {
 
 .continue-reading i { margin-left: .5em; }
 
-.post .separator {
+.hentry .separator {
 	margin: 0rem 2rem;
     border-bottom-width: 1px;
     border-bottom-color: #cccccc;
@@ -2063,6 +2064,7 @@ object { max-width: 100%; }
 		max-width: 540px;
 		width: 100%;
 		margin: 0px;
+		padding: 1em 0 0 0;
 	}
 
 	.entry-box.side-teaser .entry-title,

@@ -16,7 +16,7 @@
 
                 // Special case: if the featured image is a Flickr media item, link to the Flickr page
                 $attachment = get_post($thumb_id);
-                if ((null !== (FML\FML::POST_TYPE))
+                if ( class_exists('FML\FML')
                     && ($attachment->post_type == FML\FML::POST_TYPE)) {
                     $attachment_url = FML\FML::get_flickr_link($attachment);
                 }
