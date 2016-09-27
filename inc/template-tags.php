@@ -9,7 +9,7 @@
 
 if (! function_exists( 'pho_paging_nav' ) ) :
 /**
- * Determines if a post is featured and gets its thumbnail displayed as a large teaser 
+ * Determines if a post is featured and gets its thumbnail displayed as a large teaser
  */
 function pho_is_featured_post() {
 	$featured_tag = get_theme_mod('pho_featured_post_tag');
@@ -220,7 +220,7 @@ if ( ! function_exists( 'pho_the_attached_image' ) ) :
 function pho_the_attached_image() {
 	$post = get_post();
 	/**
-	 * Filter the default Twenty Fourteen attachment size.
+	 * Filter the default attachment size.
 	 */
 	$attachment_size = apply_filters( 'pho_attachment_size', array( 880, 9999 ) );
 	$next_attachment_url = wp_get_attachment_url();
