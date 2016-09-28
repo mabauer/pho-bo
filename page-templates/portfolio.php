@@ -55,6 +55,7 @@ get_header(); ?>
 				$posts_per_page = get_option( 'jetpack_portfolio_posts_per_page', '-1' );
 
 				$args = array(
+					'suppress_filters' => true,
 					'post_type'      => 'jetpack-portfolio',
 					'paged'          => $paged,
 					'posts_per_page' => $posts_per_page,

@@ -89,6 +89,9 @@ function pho_setup() {
         'caption',
 	) );
 
+	// Enable support for jetpack's portfolio custom type
+	add_theme_support( 'jetpack-portfolio' );
+
 }
 endif; // pho_setup
 add_action( 'after_setup_theme', 'pho_setup' );
