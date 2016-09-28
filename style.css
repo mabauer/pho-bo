@@ -1747,18 +1747,23 @@ a.author-link {
 }
 
 /* ...thumbnail fades out */
-.portfolio-grid a.portfolio-thumb {
+.portfolio-grid a.portfolio-thumb,
+.portfolio-grid a.portfolio-thumb img 
+ {
 	line-height: 0;
 	opacity: 1;
 }
 
-.portfolio-grid .portfolio-element:hover a.portfolio-thumb {
+.portfolio-grid .portfolio-element:hover a.portfolio-thumb,
+.portfolio-grid .portfolio-element:hover a.portfolio-thumb img {
 	opacity: 0.5;
 }
 
 /* Set up the transitions */
 .portfolio-grid .portfolio-element:hover .entry-header,
-.portfolio-grid .portfolio-element:hover a.portfolio-thumb {
+.portfolio-grid .portfolio-element:hover a.portfolio-thumb,
+.portfolio-grid .portfolio-element:hover a.portfolio-thumb img
+ {
 	-webkit-transition: opacity 0.15s ease-out;
 	   	-ms-transition: opacity 0.15s ease-out;
 	   	 -o-transition: opacity 0.15s ease-out;
