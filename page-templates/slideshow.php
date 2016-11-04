@@ -6,7 +6,17 @@
   * custom field 'slideshow_tag' for the corresponding page.
  */
 
-?><!DOCTYPE html>
+?>
+
+<?php
+	if ( get_option( 'show_on_front' ) == 'page' ) :
+		$blog_page = get_permalink( get_option('page_for_posts' ));
+	else :
+		$blog_page = get_bloginfo('url');
+	endif
+
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -18,19 +28,17 @@
 		<?php wp_head(); ?>
 	</head>
 
-					<?php 
-						if ( get_option( 'show_on_front' ) == 'page' ) :
-							$blog_page = get_permalink( get_option('page_for_posts' ));
-						else :
-							$blog_page = bloginfo('url');
-						endif
-					?>
-
 	<body <?php body_class();?> >
 
 	<div id="page" class="slideshow site">
 
+
 		<div class="header-bar">
+			<div class="progress-indicator">
+				<div class="endless">
+				</div>
+			</div>
+
 			<header id="masthead" class="site-header" role="banner">
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'pho' ); ?></a>
 
@@ -103,6 +111,8 @@
 		<?php global $data; ?>
 		<?php $data = array(); ?>
 		<?php $slides = new WP_Query( 'tag=' . $slide_tag . '&nopaging=true' ); ?>
+
+		<?php error_log('Filtering for ' . $slide_tag . ', returning ' . $slides->post_count); ?>
 		<?php while ( $slides->have_posts() ) : $slides->the_post(); ?>
 			<?php
 				if ( has_post_thumbnail() ) :
@@ -121,6 +131,9 @@
 
 			<script type="text/javascript">
 		    	jQuery(document).ready(function($) {
+					<?php
+						if (count($data) > 0) :
+					?>
 			    		$.supersized({
 			    				// Functionality
 			    				slideshow               :   1,			// Slideshow on/off
@@ -177,6 +190,10 @@
 							api.nextSlide();
 			   			});
 
+					<?php
+						endif;
+					?>
+
 	   			// Info and sign-in buttons
 				$('.goto_button').on('click', function() {
 					target = $(this).find('a').attr('href')
@@ -189,4 +206,5 @@
 		</script>
 
 	</body>
+
 <?php wp_footer(); ?>
