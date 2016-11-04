@@ -902,7 +902,7 @@ a:focus.page-numbers{
 
 .progress-indicator {
     position: relative;
-    z-index: 999999;
+    z-index: 1;
     height: 3px;
     display: block;
     width: 100%;
