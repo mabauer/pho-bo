@@ -153,6 +153,8 @@ function pho_scripts() {
         // FontAwesome
         wp_enqueue_style( 'pho_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css');
 
+	    wp_enqueue_script( 'pho-functions', get_template_directory_uri() . '/js/functions.js', array(), '20161103', true );
+
 	    wp_enqueue_script( 'pho-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
         wp_enqueue_script( 'pho-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );

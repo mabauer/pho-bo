@@ -893,6 +893,76 @@ a:focus.page-numbers{
 	}
 }
 
+/* Progress bar */
+
+.content-area {
+	opacity: 0;
+}
+
+.progress-indicator {
+    position: relative;
+    z-index: 999999;
+    height: 3px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e1e1e1; // #dbe6f3;
+}
+
+.progress-indicator {
+	-webkit-animation: fadein 0.5s;
+	   	-ms-animation: fadein 0.5s;
+	   	 -o-animation: fadein 0.5s;
+	   	 	animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+	0%   {opacity: 0; }
+	75%  {opacity: 0; }
+	100% {opacity: 1; }
+}
+
+@keyframes fadeout {
+	0%   {opacity: 1; }
+	100% {opacity: 0; }
+}
+
+.progress-indicator .endless {
+    background-color: #4d4d4d; // #57a1ed;
+}
+
+.progress-indicator .endless:before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+	-webkit-animation: endless 1.8s cubic-bezier(0.6, 0.8, 0.7, 0.4) infinite;
+	    -ms-animation: endless 1.8s cubic-bezier(0.6, 0.8, 0.7, 0.4) infinite;
+	     -o-animation: endless 1.8s cubic-bezier(0.6, 0.8, 0.7, 0.4) infinite;
+            animation: endless 1.8s cubic-bezier(0.6, 0.8, 0.7, 0.4) infinite;
+}
+
+@keyframes endless {
+    0% {
+        left: -35%;
+        right: 100%
+    }
+
+    80% {
+        left: 100%;
+        right: -90%
+    }
+
+    100% {
+        left: 100%;
+        right: -90%
+    }
+}
+
+
+
 /* Header search */
 
 .search-toggle {
