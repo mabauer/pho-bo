@@ -341,13 +341,14 @@ textarea:focus {
 input[type="search"] {
     padding: 8px;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
-    color: #fff;
+    color: #000;
     border: 0px solid #ccc;
+	border-bottom: 2px solid #000
 }
 
 input[type="search"]:focus {
     outline: none;
-    color: #fff;
+    color: #000;
 }
 
 textarea {
@@ -1002,6 +1003,7 @@ a:focus.page-numbers{
     background: hsl(0, 0%, 30%);
 }
 
+
 .search-box .search-field {
     color: #fff;
     max-width: 362px;
@@ -1011,7 +1013,12 @@ a:focus.page-numbers{
     font-size: 1.4rem;
     background-color: #4d4d4d;
     border: 0;
-    border-bottom: 2px solid #fff
+    border-bottom: 2px solid #fff;
+}
+
+.search-box input[type="search"],
+.search-box input[type="search"]:focus {
+    color: #fff;
 }
 
 .hide { display: none; }
@@ -1818,7 +1825,7 @@ a.author-link {
 
 /* ...thumbnail fades out */
 .portfolio-grid a.portfolio-thumb,
-.portfolio-grid a.portfolio-thumb img 
+.portfolio-grid a.portfolio-thumb img
  {
 	line-height: 0;
 	opacity: 1;
