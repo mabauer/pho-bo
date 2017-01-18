@@ -12,8 +12,8 @@ Layout: No sidebar
 }
 
 .single .site-content,
-.page .site-content { 
-    background: #fff; 
+.page .site-content {
+    background: #fff;
     background: hsl(0, 0%, 100%);
 }
 
@@ -95,7 +95,7 @@ Layout: No sidebar
 		margin: 2rem auto 4rem;
 		max-width: 1280px;
 		padding-top: 2rem;
-		padding-bottom: 4rem;	
+		padding-bottom: 4rem;
 	}
     .content-area {
         max-width: 1280px;
@@ -111,13 +111,12 @@ Layout: No sidebar
     .comments-area,
     .paging-navigation,
     .author-index { margin: auto; }
-    
+
     .search-box-wrapper {
     	z-index: 2;
     	width: 100%;
     	max-width: 1280px;
     	margin: auto;
     }
-    
-}
 
+}

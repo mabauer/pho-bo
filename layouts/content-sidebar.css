@@ -13,14 +13,15 @@ Layout: Sidebar right
 /*
 .single .site-content,
 .page .site-content,
-.blog .site-content { 
-    background: #fff; 
+.blog .site-content {
+    background: #fff;
     background: hsl(0, 0%, 100%);
 }
 */
 
-.single .content-area, 
+.single .content-area,
 .page .content-area {
+	max-width: 100%;
 	float: left;
 	background: #fff;
 	background: hsl(0, 0%, 100%);
@@ -56,7 +57,7 @@ Layout: Sidebar right
 .paging-navigation {
     position: relative;
     max-width: 880px;
-    padding: 0 2rem; 
+    padding: 0 2rem;
     margin: 0 auto;
 }
 
@@ -112,7 +113,7 @@ Layout: Sidebar right
 		margin: auto;
 		max-width: 1280px;
 		padding-top: 2rem;
-		padding-bottom: 2rem;	
+		padding-bottom: 2rem;
 	}
     .content-area {
         float: left;
@@ -136,10 +137,10 @@ Layout: Sidebar right
     	max-width: 1280px;
     	margin: auto;
     }
-    
+
 }
 
-@media screen and (max-width: 1279px) {  
+@media screen and (max-width: 1279px) {
     .site-content .widget-area {
         float: left;
         width: auto;
@@ -147,4 +148,3 @@ Layout: Sidebar right
         margin: 1em auto 0;
     }
 }
-
