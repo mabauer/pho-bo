@@ -39,8 +39,8 @@ function pho_setup() {
 	/**
 	* Set the content width based on the theme's design and stylesheet.
 	*/
-	if ( ! isset( $content_width ) ) {
-		   $content_width = 840; /* pixels */
+	if ( ! isset( $GLOBALS['content_width'] ) ) {
+		   $GLOBALS['content_width'] = 840; /* pixels */
 	}
 
 	// This theme styles the visual editor to resemble the theme style.
@@ -202,6 +202,19 @@ function pho_add_custom_post_types_to_query( $query ) {
 	}
 }
 add_filter( 'pre_get_posts', 'pho_add_custom_post_types_to_query' );
+
+/**
+ * Remove comment stuff from attachments
+ */
+function pho_remove_comments_from_attachments( $open, $post_id ) {
+    $post = get_post( $post_id );
+    if( $post->post_type == 'attachment' ) {
+        return false;
+    }
+    return $open;
+}
+add_filter( 'comments_open', 'pho_remove_comments_from_attachments', 10 , 2 );
+
 
 /**
  * Force IE out its compatibility mode. Either use IE=11 oder IE=edge.

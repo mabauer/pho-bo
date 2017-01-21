@@ -2005,9 +2005,13 @@ ul#supersized {
 	margin: 0;
 }
 
+/*--------------------------------------------------------------
+12 Extensions, Jetpack
+--------------------------------------------------------------*/
+
 
 /*--------------------------------------------------------------
-12.0 Infinite scroll
+12.1 Infinite scroll
 --------------------------------------------------------------*/
 
 
@@ -2022,7 +2026,7 @@ ul#supersized {
 }
 
 /*--------------------------------------------------------------
-12.1 Jetpack: Share buttons
+12.2 Jetpack: Share buttons
 --------------------------------------------------------------*/
 
 /* Share buttons inserted by Jetpack */
@@ -2035,6 +2039,89 @@ div.sharedaddy h3.sd-title {
 .sharedaddy a.sd-button {
 	vertical-align: top;
 }
+
+/*--------------------------------------------------------------
+12.2 Jetpack: Carousel
+--------------------------------------------------------------*/
+
+.jp-carousel-photo-info {
+	display: none !important;
+}
+
+@media screen and (min-width: 760px) {
+
+	.jp-carousel .jp-carousel-slide {
+		position: absolute !important;
+	}
+
+	.jp-carousel-info {
+		position: relative !important;
+		left: 0px !important;
+		right: 0px !important;
+		height: 100%;
+		padding: 2rem 140px;
+		background-color: #fff;
+	}
+
+	.jp-carousel-info .jp-carousel-titleanddesc {
+		border-top: 2px solid #999 !important;
+		color: #4b4b4b !important;
+	}
+
+	.jp-carousel-info p {
+		color: #4b4b4b !important;
+	}
+
+	.jp-carousel-info .jp-carousel-titleanddesc-title {
+		color: #4b4b4b !important;
+	}
+
+	.jp-carousel-info .jp-carousel-image-meta {
+		background: #fff !important;
+	    border: 2px solid #999 !important;
+	}
+
+	.jp-carousel-info .jp-carousel-image-meta li {
+		color: #333 !important;
+	}
+
+	.jp-carousel-info a.jp-carousel-image-download {
+		color: #333 !important;
+		color: hsl(0, 0%, 20%);
+	}
+	.jp-carousel-info a.jp-carousel-image-download:hover,
+	.jp-carousel-info a.jp-carousel-image-download:focus,
+	.jp-carousel-info a.jp-carousel-image-download::active {
+		text-decoration: underline;
+	}
+
+	#jp-carousel-comments-loading {
+		display: none !important;
+		color: #fff !important;
+	}
+
+	.jp-carousel-close-hint {
+		position: fixed !important;
+		top: 20px !important;
+	}
+
+	.jp-carousel-close-hint span {
+		background-color: transparent !important;
+		font-size: 32px !important;
+	}
+
+	div.jp-carousel-fadeaway {
+		background: #fff !important;
+	}
+
+
+}
+
+/* TODO:
+- Media query for mobile: Remove padding from jp-carousel-info
+- Style exif box
+- Adjust close button
+*/
 
 /*--------------------------------------------------------------
 13.0 Media
@@ -2080,7 +2167,12 @@ div.sharedaddy h3.sd-title {
 	background: hsl(0, 0%, 100%);
 }
 
-.site-main .gallery { margin-bottom: 1.5em; }
+.site-main .gallery {
+	margin-bottom: 1.5em;
+	display: block;
+	float: left;
+	width: 100%;
+}
 
 .gallery-caption {
     position: absolute;
