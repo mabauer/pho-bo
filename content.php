@@ -41,9 +41,9 @@
             <header class="entry-header clear">
                 <?php
 
-                // Display a thumb tack in the top right hand corner if this post is sticky
+                // Display a marker in the top right hand corner if this post is sticky
                 if (is_sticky()) {
-                    echo '<i class="fa fa-thumb-tack sticky-post"></i>';
+                    echo '<i class="fa fa-chevron-circle-up sticky-post"></i>';
                 }
 
                 /* Translators: used between list items, there is a space after the comma */
