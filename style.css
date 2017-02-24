@@ -2065,21 +2065,22 @@ div.sharedaddy h3.sd-title {
 	}
 
 	.jp-carousel-info .jp-carousel-titleanddesc {
-		border-top: 2px solid #999 !important;
-		color: #4b4b4b !important;
+		border-top: 1px solid #e1e1e1 !important;
+		color: #000 !important;
 	}
 
 	.jp-carousel-info p {
-		color: #4b4b4b !important;
+		color: #000 !important;
 	}
 
 	.jp-carousel-info .jp-carousel-titleanddesc-title {
-		color: #4b4b4b !important;
+		color: #000 !important;
+		font-weight: bold !important;
 	}
 
 	.jp-carousel-info .jp-carousel-image-meta {
 		background: #fff !important;
-	    border: 2px solid #999 !important;
+	    border: 1px solid #e1e1e1 !important;
 	}
 
 	.jp-carousel-info .jp-carousel-image-meta li {
