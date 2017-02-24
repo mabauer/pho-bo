@@ -10,14 +10,20 @@
 
     <?php
 
-    // On larger screens, featured posts will be displayed with large images,...
+    // On larger screens, featured (and those on top of the page) posts will be displayed with large images,...
     // ... normal ones get side teasers.
     $teaser = 'no-teaser';
     if (has_post_thumbnail()) {
-        if (!is_archive() && (pho_is_featured_post() || is_sticky() || ($wp_query->current_post == 0))) {
-            $teaser = 'large-teaser';
-        } else {
-            $teaser = 'side-teaser';
+        $teaser = 'side-teaser';
+        if (!is_archive()) {
+            if (pho_is_featured_post() || is_sticky() || ($wp_query->current_post == 0)) {
+                $teaser = 'large-teaser';
+            }
+            // Since the top-most post on each page will always be displayed with a large image,
+            // the second post should be displayed with a small image only
+            if ($wp_query->current_post == 1) {
+                $teaser = 'side-teaser';
+            }
         }
     }
     ?>
