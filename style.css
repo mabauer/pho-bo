@@ -1054,6 +1054,7 @@ a:focus.page-numbers{
 }
 
 .widget-title {
+	margin-top: 1em;
     margin-bottom: 1em;
     font-size: 26px;
     font-size: 1.6rem;
@@ -1188,7 +1189,6 @@ ul.sociallinks {
 
 #colophon .widget_pho_sociallinks ul.sociallinks {
 	margin-left: -18px;
-    margin-top: -16px;
 }
 
 ul.sociallinks li {
@@ -1246,8 +1246,7 @@ ul.sociallinks li a:hover {
     font-size: 36px;
     font-size: 3.6rem;
     line-height: 1.3em;
-    color: #000;
-    color: hsl(0, 0%, 0%);
+    color: inherit;
 	padding: 1rem 0 0 0;
 }
 
@@ -1457,6 +1456,7 @@ blockquote cite {
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
     font-size: 16px;
     font-size: 1.6rem;
+	text-transform: capitalize;
 }
 
 .category-list a {
@@ -1471,6 +1471,7 @@ blockquote cite {
 }
 
 .entry-meta {
+	margin-top: 1rem;
     margin-bottom: 2rem;
     padding: 0;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;

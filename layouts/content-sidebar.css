@@ -92,7 +92,7 @@ Layout: Sidebar right
     max-width: 88rem;
     width: 100%;
     padding: 0rem 0rem 2rem 0rem;
-    margin: 0 auto 0rem;
+    margin: 0em auto 0em;
     background: #fff;
     background: hsl(0, 0%, 100%);
 }
@@ -116,8 +116,9 @@ Layout: Sidebar right
 		padding-bottom: 2rem;
 	}
     .content-area {
+		margin-top: 1em;
         float: left;
-        max-width: 880px;
+        max-width: 880px !important;
     }
 
     .index-box,
@@ -129,7 +130,9 @@ Layout: Sidebar right
     .post-navigation,
     .comments-area,
     .paging-navigation,
-    .author-index { margin-right: 0; }
+    .author-index {
+		// margin-right: 0;
+	}
 
 	.search-box-wrapper {
     	z-index: 2;
