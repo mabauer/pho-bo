@@ -2240,8 +2240,13 @@ object { max-width: 100%; }
 @media screen and (min-width: 880px) {
 
 	.thumbnail-box.side-teaser {
+		margin: 2rem;
 		float: left;
 		max-width: 280px;
+	}
+
+	.thumbnail-box.large-teaser {
+		margin: 2rem;
 	}
 
 	.entry-box.side-teaser {
@@ -2258,6 +2263,10 @@ object { max-width: 100%; }
 		margin: 0 0 1rem;
 		font-size: 2.8rem;
 		font-size: 28px;
+	}
+
+	.entry-box.side-teaser .category-list {
+		margin-top: 0;
 	}
 
 }
