@@ -21,5 +21,5 @@
 	</header>
 	<div class="entry-content clearfix">
 	</div><!-- end .entry-content -->
-
-</article><!-- end post -<?php the_ID(); ?> -->
+<!-- end post -<?php the_ID(); ?> -->
+</article>

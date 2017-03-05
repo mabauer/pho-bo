@@ -1804,9 +1804,14 @@ a.author-link {
 /* Portfolio is responsive */
 /* Default: three columns, hover effects, less spacing */
 
+.portfolio .content-area {
+	opacity: 1;
+}
+
 .portfolio-grid {
-	max-width: 880px;
+	max-width: 910px;
 	width: 100%;
+	margin: 0rem 1rem;
 }
 
 /* Header fades in ... */
@@ -1820,6 +1825,10 @@ a.author-link {
 
 .portfolio-grid .portfolio-element:hover .entry-header {
 	opacity: 1;
+}
+
+.portfolio-grid a.portfolio-thumb img {
+	display: block;
 }
 
 /* ...thumbnail fades out */
@@ -1861,7 +1870,7 @@ a.author-link {
 	margin: 0;
 }
 
-/* Three columns, wide display, more spacing */
+/* Four columns on wider displays */
 
 @media screen and (min-width: 1280px) {
 
@@ -1873,23 +1882,24 @@ a.author-link {
 
     .portfolio-grid {
     	width: 100% !important;
-    	max-width: 1280px !important;
+    	max-width: 1260px !important;
     }
 
     .portfolio-grid .portfolio-element {
         float: left;
-        width: 33%;
-        padding: 0 2rem 2rem 2rem;
+        width: 25%;
+		padding: 1rem 1rem 1rem 1rem;
+		margin: 0;
     }
 }
 
 /* One column, no hover effects */
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 600px) {
     .portfolio-grid { width: 100%!important; }
 
     .portfolio-grid .portfolio-element {
-        float: none;
+        float: left;
 		max-width: 740;
         width: 100%;
         margin: auto;
