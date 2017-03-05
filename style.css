@@ -150,7 +150,7 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 900;
+    font-weight: bold;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
     color: #000;
     color: hsl(0, 0%, 0%);
@@ -652,7 +652,7 @@ a:active {
 .nav-indicator { margin-bottom: 1em; }
 
 .nav-previous h1,
-.nav-next h1 { font-weight: 900; }
+.nav-next h1 { font-weight: bold; }
 
 .comment-navigation {
     padding: 1em 0;
@@ -1063,7 +1063,7 @@ a:focus.page-numbers{
 }
 
 .widget a {
-    font-weight: 700;
+    font-weight: bold;
     color: #000;
     color: hsl(0, 0%, 0%);
 }
@@ -1243,7 +1243,7 @@ ul.sociallinks li a:hover {
 
 .entry-title {
     margin: 0 0 2rem;
-    font-weight: 900;
+    font-weight: bold;
     font-size: 36px;
     font-size: 3.6rem;
     line-height: 1.3em;
@@ -1480,7 +1480,7 @@ blockquote cite {
     font-size: 1.4rem;
 }
 
-.entry-meta a { font-weight: 600; }
+.entry-meta a { font-weight: bold; }
 
 /* Hides 'on' and '.' in post meta on wide screens. */
 .mobile-hide {
@@ -1561,7 +1561,7 @@ blockquote cite {
 .continue-reading {
     margin: 0 0rem;
     display: inline-block;
-    font-weight: 900;
+    font-weight: bold;
     font-size: 16px;
     font-size: 1.6rem;
 }
@@ -1603,7 +1603,7 @@ blockquote cite {
 11.4 Comments
 --------------------------------------------------------------*/
 .comments-title {
-    font-weight: 900;
+    font-weight: bold;
     font-size: 36px;
     font-size: 3.6rem;
 }
@@ -1624,7 +1624,7 @@ ol.children { list-style-type: none; }
 }
 
 .comment-author .fn {
-    font-weight: 900;
+    font-weight: bold;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
     font-size: 20px;
     font-size: 2rem;
@@ -1653,7 +1653,7 @@ ol.children { list-style-type: none; }
 .comment-content a { word-wrap: break-word; }
 
 .reply {
-    font-weight: 600;
+    font-weight: bold;
     font-size: 14px;
     font-size: 1.4rem;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
@@ -1681,7 +1681,7 @@ ol.children { list-style-type: none; }
 
 .comment-reply-title {
     margin-bottom: .5em;
-    font-weight: 900;
+    font-weight: bold;
     font-size: 30px;
     font-size: 3rem;
 }
@@ -1717,7 +1717,7 @@ ol.children { list-style-type: none; }
     display: block;
     padding: 2rem 0;
     margin: 0 auto;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 26px;
     font-size: 2.6rem;
     color: #bfbfbf;
@@ -1767,7 +1767,7 @@ ol.children { list-style-type: none; }
 
 .share-and-more {
     padding: .1rem 0 1.1rem;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 16px;
     font-size: 1.6rem;
 }
@@ -1784,7 +1784,7 @@ ol.children { list-style-type: none; }
 .author-social-media a:focus { text-decoration: none; }
 
 a.author-link {
-    font-weight: 900;
+    font-weight: bold;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
     color: #000;
     color: hsl(0, 0%, 0%);
@@ -2046,7 +2046,7 @@ ul#supersized {
 div.sharedaddy h3.sd-title {
 	font-size: 16px !important;
 	font-size: 1.6rem !important;
-	font-weight: 700 !important;
+	font-weight: bold !important;
 }
 
 .sharedaddy a.sd-button {
