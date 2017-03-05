@@ -1,0 +1,13 @@
+/*
+ * Stylesheet for flexible-posts-widget 
+ */
+
+.dpe-flexible-posts .post {
+    margin: 0px 0px 0px 0px;
+    max-width: 280px;
+    display: inline-block;
+}
+
+.dpe-flexible-posts .title {
+	margin-top: 10px;
+}

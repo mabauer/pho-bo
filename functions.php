@@ -148,6 +148,9 @@ function pho_scripts() {
                 wp_enqueue_style( 'pho-style', get_stylesheet_uri() );
         }
 
+		// Additional stylesheet for DPE's flexible post widget
+		wp_enqueue_style( 'pho-flexible-posts-widget' , get_template_directory_uri() . '/flexible-posts-widget/flexible-posts-widget.css' );
+
         // Inlude Google Webfonts
         wp_enqueue_style( 'pho-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto' );
 
