@@ -23,11 +23,11 @@
 
 				if ( !empty($attachment_url) ) {
                     echo '<a href=' . $attachment_url . '>';
-                    the_post_thumbnail();
+                    the_post_thumbnail('featured-image');
 				    echo '</a>';
                 }
                 else {
-                    the_post_thumbnail();
+                    the_post_thumbnail('featured-image');
                 }
 				echo '</div>';
 			}
