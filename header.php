@@ -20,16 +20,16 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<div class="header-bar">
 
-		<div class="progress-indicator">
-			<div class="endless">
-			</div>
+	<div class="progress-indicator">
+		<div class="endless">
 		</div>
+	</div>
+
+	<div class="header-bar">
 
 		<header id="masthead" class="site-header" role="banner">
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'pho' ); ?></a>
-
 
 			<div id="site-header">
 				<?php if ( get_header_image() ) : ?>
