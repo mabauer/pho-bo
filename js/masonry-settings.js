@@ -23,6 +23,7 @@ jQuery(document).ready(function($){
   				$footer.masonry('layout');
 			});
 
+
             $(window).on('resize', relayoutFooterWidgets);
             $(document).on('imageCropped', relayoutFooterWidgets);
         },

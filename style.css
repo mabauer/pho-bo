@@ -401,7 +401,7 @@ a:active {
     clear: both;
     display: block;
     font-family: 'Helvetica Neue', 'Roboto', sans-serif;
-    // text-transform: uppercase;
+    /* text-transform: uppercase; */
     background: #313131;
     background: hsl(0, 0%, 19%);
     margin-top: -44px;
@@ -819,7 +819,7 @@ a:focus.page-numbers{
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 16px;
-	//margin-bottom: 48px;
+	/* margin-bottom: 48px; */
 	margin-left: 20px;
 	z-index: 1;
 }
@@ -830,7 +830,7 @@ a:focus.page-numbers{
     font-size: 2.4rem;
     text-transform: uppercase;
     line-height: normal;
-    //padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 }
 
 .site-description {
@@ -911,7 +911,7 @@ a:focus.page-numbers{
     display: block;
     width: 100%;
     overflow: hidden;
-    background-color: #e1e1e1; // #dbe6f3;
+    background-color: #e1e1e1; /* #dbe6f3; */
 }
 
 .progress-indicator {
@@ -933,7 +933,7 @@ a:focus.page-numbers{
 }
 
 .progress-indicator .endless {
-    background-color: #4d4d4d; // #57a1ed;
+    background-color: #4d4d4d; /* #57a1ed; */
 }
 
 .progress-indicator .endless:before {
@@ -1979,7 +1979,7 @@ a.author-link {
 	width: 15%;
 	display: inline-block;
 	height: 100%;
-//	margin: auto;
+    /* margin: auto; */
 	margin-top: 0;
 }
 
@@ -1987,7 +1987,7 @@ a.author-link {
 	width: 70%;
 	display: inline-block;
 	height: 100%;
-//	margin: auto;
+    /* margin: auto; */
 	margin-top: 0;
 }
 
@@ -1995,7 +1995,7 @@ a.author-link {
 	width: 15%;
 	display: inline-block;
 	height: 100%;
-//	margin: auto;
+    /*margin: auto; */
 	margin-top: 0;
 }
 

@@ -75,7 +75,7 @@ Layout: Sidebar right
 }
 
 .page-header {
-//    margin-top: 1em;
+    /* margin-top: 1em; */
     margin-bottom: 1em;
 }
 
@@ -125,7 +125,7 @@ Layout: Sidebar right
     .comments-area,
     .paging-navigation,
     .author-index {
-		// margin-right: 0;
+		/* margin-right: 0; */
 	}
 
 	.search-box-wrapper {
