@@ -40,7 +40,7 @@ function pho_setup() {
 	* Set the content width based on the theme's design and stylesheet.
 	*/
 	if ( ! isset( $GLOBALS['content_width'] ) ) {
-		   $GLOBALS['content_width'] = 880; /* pixels */
+		   $GLOBALS['content_width'] = 760; /* pixels */
 	}
 
 	// This theme styles the visual editor to resemble the theme style.
@@ -59,8 +59,8 @@ function pho_setup() {
 	// Featured image sizes for responsive display
 	add_image_size('large-thumb', 1280, 9999);
 	add_image_size('medium-thumb', 1024, 9999);
-	add_image_size('featured-image', 880, 9999);
-	add_image_size('post-thumbnail', 880, 586, true);
+	add_image_size('featured-image', 760, 9999);
+	add_image_size('post-thumbnail', 760, 506, true);
 	add_image_size('small-thumb', 440, 9999);
 
 	// Featured image size for portfolio view

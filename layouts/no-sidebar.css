@@ -6,8 +6,8 @@ Layout: No sidebar
 .site-content {
 	padding-top: 2rem;
     padding-bottom: 4rem;
-    max-width: 920px;
-    max-width: 92rem;
+    max-width: 800px;
+    max-width: 80rem;
     margin: 2rem auto 4rem;
 }
 
@@ -23,7 +23,7 @@ Layout: No sidebar
 }
 
 .site-header {
-	max-width: 920px;
+	max-width: 800px;
 	position: relative;
 	margin: auto;
 }
@@ -37,8 +37,8 @@ Layout: No sidebar
 .comments-area,
 .paging-navigation {
     position: relative;
-    max-width: 920px;
-    max-width: 92rem;
+    max-width: 800px;
+    max-width: 80rem;
     padding: 0 2rem;
     margin: 0 auto;
 }
@@ -71,8 +71,8 @@ Layout: No sidebar
 
 .index-box,
 .author-index {
-    max-width: 920px;
-    max-width: 92rem;
+    max-width: 800px;
+    max-width: 80rem;
     padding: 0rem 0rem 2rem 0rem;
     margin: 0 auto 0rem;
     background: #fff;
@@ -82,24 +82,24 @@ Layout: No sidebar
 .search-box-wrapper {
     z-index: 2;
     width: 100%;
-    max-width: 920px;
+    max-width: 800px;
     margin: auto;
 }
 
 @media screen and (min-width: 1280px) {
 	
 	.site-header {
-		max-width: 1280px;
+		max-width: 1120px;
 		margin: auto;
 	}
 	.site-content {
 		margin: 2rem auto 4rem;
-		max-width: 1280px;
+		max-width: 1120px;
 		padding-top: 2rem;
 		padding-bottom: 4rem;
 	}
     .content-area {
-        max-width: 1280px;
+        max-width: 1120px;
     }
 
     .index-box,
@@ -116,7 +116,7 @@ Layout: No sidebar
     .search-box-wrapper {
     	z-index: 2;
     	width: 100%;
-    	max-width: 1280px;
+    	max-width: 1120px;
     	margin: auto;
     }
 
