@@ -23,7 +23,7 @@ class pho_sociallinks extends WP_Widget {
 		'rss' => array('Flickr', 'fa-rss'),
 		);
 
-	function pho_sociallinks() {
+	function __construct() {
 		$widget_ops = array('description' => __( 'Show icons with links to your social profiles' , 'pho') );
 
 		parent::__construct(false, __('Social Links (pho)', 'pho'),$widget_ops);
