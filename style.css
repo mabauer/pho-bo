@@ -1841,6 +1841,39 @@ a.author-link {
  {
 	line-height: 0;
 	opacity: 1;
+ }
+
+.portfolio-grid .portfolio-element {
+
+    opacity: 0;
+    animation-name: zoomIn;
+    animation-duration: 0.3s; 
+    animation-delay: 1s;
+    /* animation-direction: alternate;
+    animation-iteration-count: infinite; */
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.8, .8, .8);
+        transform: scale3d(.8, .8, .8);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
 }
 
 .portfolio-grid .portfolio-element:hover a.portfolio-thumb,
