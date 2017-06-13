@@ -2316,14 +2316,14 @@ object { max-width: 100%; }
     .no-teaser p 
     {
         font-size: 14px;
-        line-height: 140%; /* FIXME */
+        line-height: 130%; /* FIXME */
     }
 
 	.entry-box.side-teaser h1.entry-title,
 	.entry-box.no-teaser h1.entry-title {
 		margin: 0 0 1rem;
 		font-size: 26px;
-        line-height: 1.5;
+        line-height: 130%;
 	}
 
     .entry-box.side-teaser .category-list,
