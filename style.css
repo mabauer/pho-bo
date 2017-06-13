@@ -1825,6 +1825,10 @@ a.author-link {
 	opacity: 0;
 }
 
+.portfolio-grid .entry-meta {
+    margin-top: 0;
+}
+
 .portfolio-grid .portfolio-element:hover .entry-header {
 	opacity: 1;
 }
@@ -1856,8 +1860,8 @@ a.author-link {
 @keyframes zoomIn {
     from {
         opacity: 0;
-        -webkit-transform: scale3d(.8, .8, .8);
-        transform: scale3d(.8, .8, .8);
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9); 
     }
     50% {
         opacity: 1;
@@ -1931,14 +1935,17 @@ a.author-link {
 /* One column, no hover effects */
 
 @media screen and (max-width: 600px) {
-    .portfolio-grid { width: 100%!important; }
+    .portfolio-grid { 
+        width: 100%!important; 
+        margin: auto;
+    }
 
     .portfolio-grid .portfolio-element {
         float: left;
 		max-width: 740;
         width: 100%;
         margin: auto;
-        padding: 0 2rem 8rem 2rem;
+        padding: 0 0rem 8rem 0rem;
     }
 
     .portfolio-grid .entry-header {
@@ -2309,14 +2316,14 @@ object { max-width: 100%; }
     .no-teaser p 
     {
         font-size: 14px;
-        line-height: 140%; /* FIXME */
+        line-height: 130%; /* FIXME */
     }
 
 	.entry-box.side-teaser h1.entry-title,
 	.entry-box.no-teaser h1.entry-title {
 		margin: 0 0 1rem;
 		font-size: 26px;
-        line-height: 1.5;
+        line-height: 130%;
 	}
 
     .entry-box.side-teaser .category-list,
