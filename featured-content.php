@@ -14,7 +14,7 @@
     // ... normal ones get side teasers.
     $teaser = 'no-teaser';
     if (has_post_thumbnail()) {
-        $teaser = 'side-teaser';
+        $teaser = 'large-teaser';
     }
     ?>
 
