@@ -10,8 +10,7 @@
 
     <?php
 
-    // On larger screens, featured (and those on top of the page) posts will be displayed with large images,...
-    // ... normal ones get side teasers.
+    // Setup teaser image for the post
     $teaser = 'no-teaser';
     if (has_post_thumbnail()) {
         $teaser = 'large-teaser';
@@ -55,17 +54,6 @@
             </header><!-- .entry-header -->
 
             <?php
-            if ($wp_query->current_post == 0 && !is_paged() && is_front_page()) :
-
-                echo '<div class="entry-content">';
-                the_content(__('', 'pho'));
-                echo '</div>';
-
-                echo '<footer class="entry-footer continue-reading">';
-                echo '<a href="'.get_permalink().'" title="'._x('Read ', 'First part of "Read *article title* in title tag of Read more link', 'pho').get_the_title().'" rel="bookmark">'
-                .__('Read <span aria-hidden="true">the article</span>', 'pho').'<i class="fa fa-chevron-circle-right"></i><span class="screen-reader-text"> '.get_the_title().'</span></a>';
-                echo '</footer><!-- .entry-footer -->';
-            else:
 
                 echo '<div class="entry-content">';
 
@@ -106,7 +94,6 @@
                         </div><!-- .entry-meta -->
                     <?php endif; ?>
                 </footer><!-- .entry-footer -->
-            <?php endif; ?>
 
         </div> <!-- entry-box -->
 
