@@ -1856,8 +1856,8 @@ a.author-link {
 @keyframes zoomIn {
     from {
         opacity: 0;
-        -webkit-transform: scale3d(.8, .8, .8);
-        transform: scale3d(.8, .8, .8);
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9); 
     }
     50% {
         opacity: 1;
