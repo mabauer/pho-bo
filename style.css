@@ -1825,6 +1825,10 @@ a.author-link {
 	opacity: 0;
 }
 
+.portfolio-grid .entry-meta {
+    margin-top: 0;
+}
+
 .portfolio-grid .portfolio-element:hover .entry-header {
 	opacity: 1;
 }
