@@ -1935,14 +1935,17 @@ a.author-link {
 /* One column, no hover effects */
 
 @media screen and (max-width: 600px) {
-    .portfolio-grid { width: 100%!important; }
+    .portfolio-grid { 
+        width: 100%!important; 
+        margin: auto;
+    }
 
     .portfolio-grid .portfolio-element {
         float: left;
 		max-width: 740;
         width: 100%;
         margin: auto;
-        padding: 0 2rem 8rem 2rem;
+        padding: 0 0rem 8rem 0rem;
     }
 
     .portfolio-grid .entry-header {
