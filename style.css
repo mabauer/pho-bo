@@ -2333,6 +2333,16 @@ object { max-width: 100%; }
 	.thumbnail-box {
 		margin: 2rem 0rem 0rem;
 	}
+
+    .thumbnail-box.large-teaser {
+        padding-top: 2rem;
+        background-color: #e1e1e1;
+	}
+
+    .entry-box.large-teaser {
+        background-color: #e1e1e1;
+        padding-bottom: 2rem;
+	}
 }
 
 /*--------------------------------------------------------------
