@@ -99,7 +99,7 @@
 
     </div> <!-- index-box -->
 
-    <?php if (get_theme_mod('pho_show_post_separators') == 1) : ?>
+    <?php if (get_theme_mod('show_post_separators') == 1) : ?>
         <div class="separator">
         </div>
     <?php endif; ?>
