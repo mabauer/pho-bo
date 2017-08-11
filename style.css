@@ -448,7 +448,7 @@ a:active {
 
 .main-navigation ul ul a { width: 200px; }
 
-.main-navigation ul ul li { }
+/* .main-navigation ul ul li { } */
 
 .main-navigation li:hover > a,
 .main-navigation li > a:focus {
@@ -458,7 +458,7 @@ a:active {
     background: hsl(0, 0%, 30%);
 }
 
-.main-navigation ul ul :hover > a { }
+/* .main-navigation ul ul :hover > a { } */
 
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a:focus {
@@ -511,16 +511,10 @@ a:active {
     .menu-toggle {
     	position: relative;
     	float: right;
-        display: inline-block;
-        height: 54px;
-        width: 54px;
-        padding: 18px 12px 22px 12px;
-        font-weight: normal;
-        font-size: 14px;
-        font-size: 1.4rem;
+        display: block; 
+        padding: 1.0em 1.0em;
         text-decoration: none;
-        text-align: center;
-        line-height: 3.75em;
+        text-align: center; 
         color: white;
     }
 
@@ -739,14 +733,14 @@ a:focus.page-numbers{
 7.0 Alignments
 --------------------------------------------------------------*/
 .alignleft {
-    display: inline;
+    /* display: inline; */
     float: left;
     margin-right: 1.5em;
     margin-bottom: 1em;
 }
 
 .alignright {
-    display: inline;
+    /* display: inline; */
     float: right;
     margin-bottom: 1em;
     margin-left: 1.5em;
@@ -972,7 +966,7 @@ a:focus.page-numbers{
 
 .search-toggle {
     float: right;
-    padding: 1.2em 1.0em;
+    padding: 1.0em 1.0em;
     color: #fff;
     text-align: center;
     cursor: pointer;
@@ -1031,7 +1025,7 @@ a:focus.page-numbers{
 @media screen and (max-width: 900px) {
     .search-toggle {
     	position: relative;
-    	display: inline-block;
+    	/* display: inline-block; */
         float: right;
         top: 0;
         right: 0;
@@ -1223,7 +1217,7 @@ ul.sociallinks li a:hover {
 /*--------------------------------------------------------------
 11.1 Posts and pages
 --------------------------------------------------------------*/
-.sticky { }
+/* .sticky { } */
 
 .hentry { margin: 0 0 1.5em; }
 
@@ -1530,11 +1524,13 @@ blockquote cite {
     margin-right: 4rem;
 }
 
-.entry-footer i { margin-right: .5rem; }
+.entry-footer i { 
+    margin-right: .5rem; 
+}
 
 .entry-box p {
-	margin-bottom: 0em;
-	display: inline;
+	/* margin-bottom: 0em; */
+	display: inline; 
 }
 
 /*--------------------------------------------------------------
@@ -1986,17 +1982,17 @@ a.author-link {
 
 .slideshow-navbutton {
 	position: relative;
-	float: right;
-	display: inline-block;
+	float: right; 
+	display: block; 
 	height: 54px;
 	width: 54px;
-	padding: 18px 12px 22px 12px;
+	padding: 12px 12px 22px 12px;
 	font-weight: normal;
 	font-size: 20px;
 	font-size: 2.0rem;
 	text-decoration: none;
 	text-align: center;
-	line-height: 3.75em;
+	/* line-height: 3.75em; */
 	color: white;
 }
 
@@ -2266,9 +2262,9 @@ div.sharedaddy h3.sd-title {
 .site-main .gallery dd,
 .site-main .gallery figcaption { margin: 0; }
 
-.site-main .gallery-columns-4 .gallery-item { }
+/* .site-main .gallery-columns-4 .gallery-item { } */
 
-.site-main .gallery-columns-4 .gallery-item img { }
+/* .site-main .gallery-columns-4 .gallery-item img { } */
 
 /* Make sure embeds and iframes fit their containers */
 embed,
@@ -2294,15 +2290,15 @@ object { max-width: 100%; }
 	}
 
     .thumbnail-box.side-teaser {
-		margin: 2rem;
+		margin: 2rem 0 2rem 2rem; /* margin-right: 0 tp prevent messed up layout with IE */
 		float: left;
 		max-width: 240px;
 	}
 
     .entry-box.side-teaser {
 		float: right;
-		min-width: 520px;
-		max-width: 520px;
+		min-width: 520px; 
+		max-width: 520px; 
 		width: 100%;
 		margin: 0px;
 		padding: 1em 0 0 0;
