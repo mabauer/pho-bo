@@ -226,12 +226,14 @@ add_filter( 'comments_open', 'pho_remove_comments_from_attachments', 10 , 2 );
 /**
  * Force IE out its compatibility mode. Either use IE=11 oder IE=edge.
  */
-function pho_ie_compatibility_header() {
-    ?>
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <?php
+function pho_add_ie_compatibility_header($headers) {
+    if ( isset( $_SERVER['HTTP_USER_AGENT'] ) && ( strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE' ) !== false ) ) {
+        $headers['X-UA-Compatible'] = 'IE=edge,chrome=1';
+    }
+    
+    return $headers;
 }
-add_action( 'send_headers', 'pho_ie_compatibility_header', 1);
+add_filter('wp_headers', 'pho_add_ie_compatibility_header');
 
 /**
  * Implement the Custom Header feature.
