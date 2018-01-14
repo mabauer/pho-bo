@@ -2088,7 +2088,7 @@ div.sharedaddy h3.sd-title {
 }
 
 /*--------------------------------------------------------------
-12.2 Jetpack: Carousel
+12.3 Jetpack: Carousel
 --------------------------------------------------------------*/
 
 .jp-carousel-photo-info {
@@ -2162,7 +2162,6 @@ div.sharedaddy h3.sd-title {
 		background: #fff !important;
 	}
 
-
 }
 
 /* TODO:
@@ -2170,6 +2169,13 @@ div.sharedaddy h3.sd-title {
 - Style exif box
 - Adjust close button
 */
+
+/*--------------------------------------------------------------
+*** DISQUS plugin
+--------------------------------------------------------------*/
+#disqus_thread {
+    padding: 0 20px;
+}
 
 /*--------------------------------------------------------------
 13.0 Media
