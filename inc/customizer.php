@@ -117,7 +117,54 @@ function pho_register_theme_customizer( $wp_customize ) {
         )
     );
     
-     // Archive content display
+    // Use of feature slots
+    
+    $wp_customize->add_setting(
+        'feature_slots',
+        array(
+            'default' => 'move_up_featured_posts',
+            'sanitize_callback' => 'pho_sanitize_feature_slots'
+        )
+    );
+    
+    $wp_customize->add_control(
+	    'feature_slots_control',
+	    array(
+            'type' => 'radio',
+            'label' => __( 'Feature slots', 'pho' ),
+            'description' => __( 'Howto make use of feature slots?', 'pho' ),
+            'section' => 'option_section',
+            'choices' => array(
+                'move_up_featured_posts' => __( 'Move up featured posts', 'pho' ),
+                'regular_flow' => __( 'Posts according to regular flow', 'pho' )
+            ),
+            // This last one must match setting ID from above
+            'settings' => 'feature_slots'
+        )
+    );
+    
+    // Tag for posts with teasers        
+    $wp_customize->add_setting(
+        'featured_post_tag',
+        array( 
+			'default' => 'featured' 
+		)
+    );
+
+    $wp_customize->add_control(
+		 new Tags_Dropdown_Custom_Control(
+            $wp_customize,
+            'featured_post_tag_control',
+            array(
+                'label'      => __( 'Tag for featured posts', 'pho' ),
+                'description' => __( 'Tag to identify featured posts (which may be used for feature slots)', 'pho' ),
+                'section'    => 'option_section',
+                'settings' => 'featured_post_tag'
+            )
+        )
+    );
+
+         // Archive content display
     $wp_customize->add_setting(
         'archive_setting',
         array(
@@ -128,8 +175,8 @@ function pho_register_theme_customizer( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-	'archive_control',
-	array(
+	    'archive_control',
+	    array(
             'type' => 'radio',
             'label' => __( 'Archive display', 'pho' ),
             'description' => __( 'Display excerpts or full content with optional "More" tag in the blog index and archive pages.', 'pho' ),
@@ -145,14 +192,14 @@ function pho_register_theme_customizer( $wp_customize ) {
 
 	// Post separators        
     $wp_customize->add_setting(
-        'pho_show_post_separators',
+        'show_post_separators',
         array( 
-			'default' => 1 
+			'default'   => 1 ,
 		)
     );
 
     $wp_customize->add_control(
-        'pho_show_post_separators',
+        'show_post_separators',
 		array(
             'type' => 'checkbox',
             'label' => __( 'Show separators between posts', 'pho' ),
@@ -161,34 +208,21 @@ function pho_register_theme_customizer( $wp_customize ) {
         )
     );
 
-    // Tag for posts with teasers        
-    $wp_customize->add_setting(
-        'pho_featured_post_tag',
-        array( 
-			'default' => 'featured' 
-		)
-    );
-
-    $wp_customize->add_control(
-		 new Tags_Dropdown_Custom_Control(
-            $wp_customize,
-            'pho_featured_post_tag',
-            array(
-                'label'      => __( 'Tag for featured posts', 'pho' ),
-                'description' => __( 'Tag to identify featured posts (which are displayed with large teaser images).', 'pho' ),
-                'section'    => 'option_section',
-                'settings' => 'pho_featured_post_tag'
-            )
-        )
-    );
-
 }
 add_action( 'customize_register', 'pho_register_theme_customizer' );
 
-// Sanitize archive display
+// Sanitize archive display settings
 function pho_sanitize_archive( $value ) {
     if ( ! in_array( $value, array( 'excerpt', 'content' ) ) )
         $value = 'excerpt';
+ 
+    return $value;
+}
+
+// Sanitize feature slots settings
+function pho_sanitize_feature_slots( $value ) {
+    if ( ! in_array( $value, array( 'move_up_featured_posts', 'regular_flow' ) ) )
+        $value = 'move_up_featured_posts';
  
     return $value;
 }

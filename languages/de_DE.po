@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pho v1.0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-18 13:59+0200\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: 2017-06-14 15:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: de_DE\n"
-"X-Generator: Poedit 1.8.4\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.1\n"
 
 # @ pho
 #: archive.php:22
@@ -20,62 +20,57 @@ msgid "Posts in the %s category:"
 msgstr "Beiträge der Kategorie %s:"
 
 # @ pho
-#: archive.php:26
+#: archive.php:25
 #, php-format
 msgid "Posts with the %s tag"
 msgstr "Beiträge mit dem Schlagwort %s"
 
 # @ pho
-#: archive.php:29
+#: archive.php:27
 #, php-format
 msgid "Author: %s"
 msgstr "Autor: %s"
 
 # @ pho
-#: archive.php:33
+#: archive.php:31
 #, php-format
 msgctxt "archive for a day"
 msgid "Posts from %s"
 msgstr "Beiträge des %s"
 
-#: archive.php:33
+#: archive.php:31
 msgctxt "Daily archives date format"
 msgid "F j, Y"
 msgstr "j. F Y"
 
 # @ pho
-#: archive.php:36
+#: archive.php:33
 #, php-format
 msgctxt "archive for a month"
 msgid "Posts from %s"
 msgstr "Beiträge vom %s"
 
 # @ pho
-#: archive.php:36
+#: archive.php:33
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
 # @ pho
-#: archive.php:39
+#: archive.php:35
 #, php-format
 msgctxt "archive for a year"
 msgid "Posts from %s"
 msgstr "Beiträge im Jahr %s"
 
 # @ pho
-#: archive.php:39
+#: archive.php:35
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
 # @ pho
-#: archive.php:42
-msgid "Asides"
-msgstr "Notizen"
-
-# @ pho
-#: archive.php:45
+#: archive.php:37
 msgid "Archives"
 msgstr "Archive"
 
@@ -96,7 +91,7 @@ msgstr "Kommentarnavigation"
 # @ pho
 #: comments.php:48
 msgid "Older Comments"
-msgstr "Ältere Kommentare"
+msgstr "Ãltere Kommentare"
 
 # @ pho
 #: comments.php:49
@@ -109,14 +104,33 @@ msgid "Comments are closed."
 msgstr "Kommentare geschlossen."
 
 # @ pho
-#: content-aside.php:17 content-page.php:32 content-single.php:43 content.php:112
+#: content-fml_photo.php:43 content-single.php:56 content.php:88
+#: featured-content.php:88
+msgid "Leave a comment"
+msgstr "Kommentieren"
+
+# @ pho
+#: content-fml_photo.php:43 content-single.php:56 content.php:88
+#: featured-content.php:88
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+# @ pho
+#: content-fml_photo.php:43 content-single.php:56 content.php:88
+#: featured-content.php:88
+msgid "% Comments"
+msgstr "% Kommentare"
+
+# @ pho
+#: content-fml_photo.php:47 content-page.php:32 content-single.php:60
+#: content.php:92 featured-content.php:92
 msgid "Edit"
 msgstr "Bearbeiten"
 
 # @ pho
 #: content-none.php:16
 msgid "Page not available"
-msgstr "Seite nicht verfügbar"
+msgstr "Seite nicht verfÃ¼gbar"
 
 # @ pho
 #: content-none.php:20
@@ -134,7 +148,7 @@ msgstr "Nichts gefunden"
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"<a href=\"%1$s\">Hier</a> kannst du deinen ersten Beitrag veröffentlichen."
+"<a href=\"%1$s\">Hier</a> kannst du deinen ersten Beitrag verÃ¶ffentlichen."
 
 # @ pho
 #: content-none.php:35
@@ -143,7 +157,7 @@ msgid ""
 "articles below or try a search:"
 msgstr ""
 "Du scheinst dich verirrt zu haben. Um zu finden, wonach du suchst, sieh dir die "
-"jüngsten Beiträgen weiter unten an, oder probier’s mal mit einer Suche:"
+"jÃ¼ngsten BeitrÃ¤gen weiter unten an, oder probierâs mal mit einer Suche:"
 
 # @ pho
 #: content-none.php:40
@@ -151,8 +165,9 @@ msgid ""
 "Nothing matched your search terms. Check out the most recent articles below or "
 "try searching for something else:"
 msgstr ""
-"Keine Übereinstimmungen mit deinen Suchbegriffen. Sieh dir die jüngsten Beitr�"
-"�gen weiter unten an, oder versuche es mit anders formulierten Suchbegriffen:"
+"Keine Übereinstimmungen mit deinen Suchbegriffen. Sieh dir die jüngsten "
+"Beiträgen weiter unten an, oder versuche es mit anders formulierten "
+"Suchbegriffen:"
 
 # @ pho
 #: content-none.php:45
@@ -167,54 +182,49 @@ msgid "Most recent posts:"
 msgstr "Aktuelle Beiträge:"
 
 # @ pho
-#: content-page.php:27 content-single.php:51 image.php:48
+#: content-page.php:27 content-single.php:68 image.php:48 single-fml_photo.php:38
 msgid "Pages:"
 msgstr "Seiten:"
 
+#: content-portfolio.php:15
+#, php-format
+msgid "Permalink to %s"
+msgstr "Link zu %s"
+
 # @ pho
-#: content-single.php:25 content.php:54
+#: content-single.php:42 content.php:45 featured-content.php:45
 msgid ", "
 msgstr ", "
 
 # @ pho
-#: content-single.php:39 content.php:108
-msgid "Leave a comment"
-msgstr "Kommentieren"
-
-# @ pho
-#: content-single.php:39 content.php:108
-msgid "1 Comment"
-msgstr "1 Kommentar"
-
-# @ pho
-#: content-single.php:39 content.php:108
-msgid "% Comments"
-msgstr "% Kommentare"
-
-# @ pho
-#: content.php:37
+#: content.php:26 featured-content.php:26
 msgid "Read "
 msgstr "Lies "
 
 # @ pho
-#: content.php:72 content.php:89
+#: content.php:69 featured-content.php:69
 msgctxt "First part of \"Read *article title* in title tag of Read more link"
 msgid "Read "
 msgstr "Lies "
 
 # @ pho
-#: content.php:73 content.php:90
+#: content.php:70 featured-content.php:70
 msgid "Read <span aria-hidden=\"true\">the article</span>"
 msgstr "<span aria-hidden=\"true\">Zum Beitrag </span>"
 
 # @ pho
-#: content.php:92
+#: content.php:72 featured-content.php:72
 msgid "Continue Reading "
 msgstr "Weiterlesen"
 
-#: content.php:93
+#: content.php:73 featured-content.php:73
 msgid "More"
 msgstr "mehr"
+
+# @ pho
+#: flexible-posts-widget/pho-bo-post-thumbnail.php:45
+msgid "No post found"
+msgstr "Keine Inhalte gefunden"
 
 # @ pho
 #: footer.php:20
@@ -222,45 +232,53 @@ msgstr "mehr"
 msgid "Proudly powered by %s"
 msgstr "Betrieben mit %s."
 
+#: footer.php:21
+msgid "WordPress"
+msgstr ""
+
 # @ pho
 #: footer.php:27
 #, php-format
 msgid "Theme: %1$s by %2$s"
 msgstr "Theme: %1$s von %2$s"
 
+#: footer.php:29
+msgid "Markus Bauer"
+msgstr ""
+
 # @ pho
-#: functions.php:68
+#: functions.php:72
 msgid "Primary Menu"
 msgstr "Primäres Menü"
 
 # @ pho
-#: functions.php:100
+#: functions.php:105
 msgid "Sidebar"
 msgstr "Sidebar"
 
 # @ pho
-#: functions.php:109
+#: functions.php:114
 msgid "Footer Widgets"
 msgstr "Footer Widgets"
 
 # @ pho
-#: functions.php:110
+#: functions.php:115
 msgid "Footer widgets area appears, not surprisingly, in the footer of the site."
 msgstr ""
 "Der „Footer“ Widget-Bereich erscheint, wenig überraschend, im Footer der Site."
 
 # @ pho
-#: header.php:25 page-templates/slideshow.php:35
+#: header.php:32 page-templates/slideshow.php:43
 msgid "Skip to content"
 msgstr "Weiter zum Inhalt"
 
 # @ pho
-#: header.php:51 header.php:56
+#: header.php:57 header.php:62
 msgid "Search"
 msgstr "Suche"
 
 # @ pho
-#: image.php:25
+#: image.php:25 single-fml_photo.php:26
 msgid "Featured in: "
 msgstr "Gezeigt in: "
 
@@ -283,7 +301,7 @@ msgstr "Autorenbiografie verbergen"
 #: inc/author-box.php:21
 #, php-format
 msgid "About %s"
-msgstr "Über %s"
+msgstr "Ãber %s"
 
 # @ pho
 #: inc/author-box.php:29
@@ -342,60 +360,76 @@ msgid "All posts by %s"
 msgstr "Alle Beiträge von %s"
 
 # @ pho
-#: inc/customizer.php:48
+#: inc/customizer.php:50
 msgid "Link Color"
 msgstr "Link-Farbe"
 
-#: inc/customizer.php:114
+#: inc/customizer.php:116
 msgid "Theme Options"
 msgstr "Theme-Einstellungen"
 
-#: inc/customizer.php:116
+#: inc/customizer.php:118
 msgid "Change the default display options for the theme."
 msgstr "Anpassen der Einstellungen des Themes."
 
-#: inc/customizer.php:134
+#: inc/customizer.php:136
 msgid "Archive display"
 msgstr "Anzeige von Beiträgen auf Archivseiten"
 
-#: inc/customizer.php:135
+#: inc/customizer.php:137
 msgid ""
 "Display excerpts or full content with optional \"More\" tag in the blog index "
 "and archive pages."
 msgstr ""
-"Anzeige von Kurzzusammenfassungen oder Beitragstexten (mit optionalem „More“-"
-"Trenner) auf Index- und Archiv-Seiten."
+"Anzeige von Kurzzusammenfassungen oder Beitragstexten (ggf. bis zum optionalem "
+"‚more'-Trenner) auf Index- und Archiv-Seiten."
 
-#: inc/customizer.php:138
+#: inc/customizer.php:140
 msgid "Excerpt"
 msgstr "Kurzzusammenfassung"
 
-#: inc/customizer.php:139
+#: inc/customizer.php:141
 msgid "Full content"
 msgstr "Voller Beitragsinhalt"
 
-#: inc/customizer.php:158
+#: inc/customizer.php:160
 msgid "Show separators between posts"
 msgstr "Anzeigen von Trennlinien zwischen Beiträgen"
 
-#: inc/customizer.php:159
+#: inc/customizer.php:161
 msgid ""
 "Display separators between posts on blog index and archive pages -- recommended "
 "when the background is white"
 msgstr ""
 "Anzeigen von Trennlinien zwischen Beiträgen auf Index- bzw. Archiv-Seiten — "
-"empfohlen bei weißer Hintergrundfarbe."
+"empfohlen bei weißer Hintergrundfarbe"
 
-#: inc/customizer.php:177
+# @ pho
+#: inc/customizer.php:180
+msgid "Feature slots"
+msgstr "‚Feature Slots‘"
+
+#: inc/customizer.php:181
+msgid "Howto make use of feature slots?"
+msgstr "Wie sollten ‚Feature Slots‘ belegt werden?"
+
+#: inc/customizer.php:184
+msgid "Move up featured posts"
+msgstr "‚Featured Posts' (Leitartikel) bevorzugen"
+
+#: inc/customizer.php:185
+msgid "Posts according to regular flow"
+msgstr "Beiträge gemäß regulärer Reihenfolge verwenden"
+
+#: inc/customizer.php:206
 msgid "Tag for featured posts"
 msgstr "Schlagwort für  ‚Featured Posts‘"
 
-#: inc/customizer.php:178
-msgid ""
-"Tag to identify featured posts (which are displayed with large teaser images)."
+#: inc/customizer.php:207
+msgid "Tag to identify featured posts (which may be used for feature slots)"
 msgstr ""
-"Schlagwort für  ‚Featured Posts‘ (Leitartikel, die mit großen Bildern "
-"dargestellt werden)."
+"Schlagwort für  ‚Featured Posts' (Leitartikel, die in ‚Feature Slots‘ platziert "
+"können)"
 
 # @ pho
 #: inc/extras.php:63
@@ -416,58 +450,58 @@ msgid "Title:"
 msgstr "Titel:"
 
 # @ pho
-#: inc/template-tags.php:45
+#: inc/template-tags.php:59
 msgid "&larr; Previous"
 msgstr "&larr; Vorherige"
 
 # @ pho
-#: inc/template-tags.php:46
+#: inc/template-tags.php:60
 msgid "Next &rarr;"
 msgstr "Nächste &rarr;"
 
 # @ pho
-#: inc/template-tags.php:54
+#: inc/template-tags.php:68
 msgid "Posts navigation"
 msgstr "Beitragsnavigation"
 
 # @ pho
-#: inc/template-tags.php:79 inc/template-tags.php:101
+#: inc/template-tags.php:93 inc/template-tags.php:115
 msgid "Post navigation"
 msgstr "Beitragsnavigation"
 
 # @ pho
-#: inc/template-tags.php:82
+#: inc/template-tags.php:96
 msgid "Previous Post:"
 msgstr "Vorheriger Beitrag:"
 
 # @ pho
-#: inc/template-tags.php:83
+#: inc/template-tags.php:97
 msgid "Next Post:"
 msgstr "Nächster Beitrag:"
 
 # @ pho
-#: inc/template-tags.php:104
+#: inc/template-tags.php:118
 msgid "Previous Image"
 msgstr "Vorheriges Bild"
 
 # @ pho
-#: inc/template-tags.php:105
+#: inc/template-tags.php:119
 msgid "Next Image"
 msgstr "Nächstes Bild"
 
 # @ pho
-#: inc/template-tags.php:126
+#: inc/template-tags.php:140
 msgctxt "Public posted on date"
 msgid "F jS, Y"
 msgstr "j. F Y"
 
 # @ pho
-#: inc/template-tags.php:128
+#: inc/template-tags.php:142
 msgctxt "Public modified on date"
 msgid "F jS, Y"
 msgstr "j. F Y"
 
-#: inc/template-tags.php:131
+#: inc/template-tags.php:145
 #, php-format
 msgctxt ""
 "mobile-hide class is used to hide connecting elements like \"on\" and \".\" on "
@@ -479,19 +513,19 @@ msgstr ""
 "<span class=\"byline\">von %1$s</span><span class=\"mobile-hide\"> am </"
 "span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide\">.</span>"
 
-#: page-templates/slideshow.php:62
+#: page-templates/slideshow.php:70
 msgid "Enter"
 msgstr "Blog"
 
-#: page-templates/slideshow.php:67
+#: page-templates/slideshow.php:75
 msgid "About"
-msgstr "Über"
+msgstr "Ãber"
 
-#: page-templates/slideshow.php:73
+#: page-templates/slideshow.php:81
 msgid "Next"
-msgstr "Nächstes Bild"
+msgstr "NÃ¤chstes Bild"
 
-#: page-templates/slideshow.php:78
+#: page-templates/slideshow.php:86
 msgid "Previous"
 msgstr "Vorheriges Bild"
 
@@ -499,14 +533,24 @@ msgstr "Vorheriges Bild"
 #: search.php:16
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
+msgstr "Suchergebnisse fÃ¼r: %s"
 
-#~ msgid "Permalink to %s"
-#~ msgstr "Link zu %s"
+# @ pho
+#: single-fml_photo.php:27
+msgid "Flickr image: "
+msgstr "Bild aus Flickr: "
+
+#: single-fml_photo.php:29
+msgid "Edit flickr image"
+msgstr "Bild aus Flickr bearbeiten"
+
+# @ pho
+#~ msgid "Asides"
+#~ msgstr "Notizen"
 
 # @ pho
 #~ msgid "Social Menu"
-#~ msgstr "Social Menü"
+#~ msgstr "Social MenÃ¼"
 
 # @ pho
 #~ msgid "Continue Reading"
@@ -514,7 +558,7 @@ msgstr "Suchergebnisse für: %s"
 
 # @ pho
 #~ msgid "Menu"
-#~ msgstr "Menü"
+#~ msgstr "MenÃ¼"
 
 # @ pho
 #~ msgid "Header Color"

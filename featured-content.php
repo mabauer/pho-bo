@@ -13,7 +13,7 @@
     // Setup teaser image for the post
     $teaser = 'no-teaser';
     if (has_post_thumbnail()) {
-        $teaser = 'side-teaser';
+        $teaser = 'large-teaser';
     }
     ?>
 
@@ -94,7 +94,6 @@
                         </div><!-- .entry-meta -->
                     <?php endif; ?>
                 </footer><!-- .entry-footer -->
-
 
         </div> <!-- entry-box -->
 
