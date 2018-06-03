@@ -2259,10 +2259,33 @@ div.sharedaddy h3.sd-title {
     position: relative;
     float: left;
     max-width:100%;
-    margin-right: 3.333333333%;
-    margin-bottom: 3rem;
+    /* margin-right: 1rem; */
+    margin-bottom: 2rem; 
     overflow: hidden;
     background: #333;
+}
+
+.gallery-columns-0 .gallery-item {
+    width: 100%;
+}
+.gallery-columns-1 .gallery-item {
+    width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	width: 370px;
+}
+.gallery-columns-3 .gallery-item {
+    width: 240px;
+}
+
+@media all and (max-width:800px) {
+	
+    .gallery-columns-2 .gallery-item,
+    .gallery-columns-3 .gallery-item {
+        width: 100%;
+        padding-right: 0;
+    }
+     
 }
 
 .site-main .gallery dd,
