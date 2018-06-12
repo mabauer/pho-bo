@@ -7,7 +7,7 @@ Description: Used to style the content editor in posts and pages.
 /* =Body
 ----------------------------------------------- */
 html .mceContentBody {
-	max-width: 700px;
+	max-width: 760px;
 }
 
 body {
@@ -185,9 +185,9 @@ td, th {
 /* Due to HTML5 galleries being activated defaul gallery styling does not apply.*/
 
 .gallery {
-        margin: auto 0;
-        padding: 6px;
-        width: 712px;
+        margin: 0px auto;
+        padding: 0px;
+        width: 760px;
 }
 
 .gallery-item:hover .gallery-caption {
@@ -195,6 +195,7 @@ td, th {
 }
 
 .gallery img {
+    width: 100%;
         display: block;
 }
 .gallery a img {
@@ -207,9 +208,8 @@ td, th {
 
 .gallery-item {
         float: left;
-        width: auto!important;
-        margin-right: 3.333333333%!important;
-        margin-bottom: 30px!important;
+        width: 232px!important;
+        margin: 10px!important;
         padding: 0!important;
         background: #333;
         overflow: hidden;
