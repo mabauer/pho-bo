@@ -44,7 +44,7 @@ function pho_setup() {
 	}
 
 	// This theme styles the visual editor to resemble the theme style.
-	$font_url = '//fonts.googleapis.com/css?family=Lato';
+	$font_url = '//fonts.googleapis.com/css?family=Roboto';
 	add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
 
 	// Add default posts and comments RSS feed links to head.
