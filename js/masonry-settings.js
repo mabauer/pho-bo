@@ -57,8 +57,10 @@ jQuery(document).ready(function($){
             if ($galleries.length) {
                 $galleries.each(function() {
                     var current = jQuery(this);
+                    // The gallery item's margin determines the spacing between elements
+                    spacing = parseInt(current.children('.gallery-item').css('margin-bottom'));
                     current.masonry({
-                        gutter: 20,
+                        gutter: spacing,
                         horizontalOrder: true,
                         isAnimated: true
                     });
