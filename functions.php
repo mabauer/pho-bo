@@ -236,6 +236,20 @@ function pho_add_ie_compatibility_header($headers) {
 add_filter('wp_headers', 'pho_add_ie_compatibility_header');
 
 /**
+ * For development:
+ * Suppress caching of editor related style files
+ * See: https://wordpress.stackexchange.com/questions/33318/forcing-reload-of-editor-style-css
+ */
+function pho_tiny_mce_before_init( $mce_init ) {
+
+    $mce_init['cache_suffix'] = 'v=' . time();
+
+    return $mce_init;    
+}
+//add_filter('tiny_mce_before_init', 'pho_tiny_mce_before_init' );
+
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
