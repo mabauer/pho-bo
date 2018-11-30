@@ -2247,6 +2247,7 @@ div.sharedaddy h3.sd-title {
 .gallery-item:hover .gallery-caption,
 .gallery-item:focus .gallery-caption{ opacity: 1; }
 
+.site-main .gallery a,
 .site-main .gallery a img {
     display: block;
     width: 100%;
@@ -2261,7 +2262,7 @@ div.sharedaddy h3.sd-title {
     max-width:100%;
     margin-bottom: 2rem; 
     overflow: hidden;
-    background: #333;
+    /* background: #333; */
 }
 
 .gallery-columns-0 .gallery-item {

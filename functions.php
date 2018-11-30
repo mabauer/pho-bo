@@ -56,15 +56,17 @@ function pho_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
 	// Featured image sizes for responsive display
-	add_image_size('large-thumb', 1280, 9999);
-	add_image_size('medium-thumb', 1024, 9999);
 	add_image_size('featured-image', 760, 9999);
 	add_image_size('post-thumbnail', 760, 506, true);
-	add_image_size('small-thumb', 440, 9999);
-
-	// Featured image size for portfolio view
+	
+	// Featured image size for portfolio view => square images
 	add_image_size('portfolio-thumb', 700, 700, true);
+
+	//add_image_size('large-thumb', 1280, 9999);
+	//add_image_size('medium-thumb', 1024, 9999);
+	//add_image_size('small-thumb', 440, 9999);
 
 
 	// This theme uses wp_nav_menu() in one location.
