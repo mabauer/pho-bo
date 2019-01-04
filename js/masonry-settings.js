@@ -38,6 +38,58 @@ jQuery(document).ready(function($){
 
     });
 
+	// Masonry settings for galleries
+    var $galleries = $('.gallery');
+
+    var relayoutGalleries = function () {
+        if ($galleries.length) {
+            $galleries.each(function() {
+                var current = jQuery(this);
+                current.masonry('layout');
+            });
+        }
+    }
+
+    enquire.register("screen and (min-width:800px)", {
+
+        // Triggered when a media query matches.
+        match : function() {
+            if ($galleries.length) {
+                $galleries.each(function() {
+                    var current = jQuery(this);
+                    // The gallery item's margin determines the spacing between elements
+                    spacing = parseInt(current.children('.gallery-item').css('margin-bottom'));
+                    current.masonry({
+                        gutter: spacing,
+                        horizontalOrder: true,
+                        isAnimated: true
+                    });
+                    current.imagesLoaded().progress(function() {
+                          current.masonry('layout');
+                    });
+                })
+            }
+            
+            $(window).on('resize', relayoutFooterWidgets);
+            $(document).on('imageCropped', relayoutFooterWidgets);
+        },
+
+        // Triggered when the media query transitions
+        // *from a matched state to an unmatched state*.
+        unmatch : function() {
+            if ($galleries.length) {
+                $galleries.each(function() {
+                var current = jQuery(this);    
+                    current.masonry('destroy');
+                });
+            }
+            $(window).off('resize', relayoutFooterWidgets);
+            $(document).off('imageCropped', relayoutFooterWidgets);
+        }
+
+    });
+
+
     // Masonry settings to layout posts in DPE's flexible_posts widget in the widget area
     var $flexible_posts = $('.widget-area .dpe-flexible-posts');
     if ($flexible_posts.length > 0) {

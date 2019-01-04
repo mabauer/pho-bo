@@ -56,15 +56,17 @@ function pho_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
 	// Featured image sizes for responsive display
-	add_image_size('large-thumb', 1280, 9999);
-	add_image_size('medium-thumb', 1024, 9999);
 	add_image_size('featured-image', 760, 9999);
 	add_image_size('post-thumbnail', 760, 506, true);
-	add_image_size('small-thumb', 440, 9999);
-
-	// Featured image size for portfolio view
+	
+	// Featured image size for portfolio view => square images
 	add_image_size('portfolio-thumb', 700, 700, true);
+
+	//add_image_size('large-thumb', 1280, 9999);
+	//add_image_size('medium-thumb', 1024, 9999);
+	//add_image_size('small-thumb', 440, 9999);
 
 
 	// This theme uses wp_nav_menu() in one location.
@@ -234,6 +236,20 @@ function pho_add_ie_compatibility_header($headers) {
     return $headers;
 }
 add_filter('wp_headers', 'pho_add_ie_compatibility_header');
+
+/**
+ * For development:
+ * Suppress caching of editor related style files
+ * See: https://wordpress.stackexchange.com/questions/33318/forcing-reload-of-editor-style-css
+ */
+function pho_tiny_mce_before_init( $mce_init ) {
+
+    $mce_init['cache_suffix'] = 'v=' . time();
+
+    return $mce_init;    
+}
+//add_filter('tiny_mce_before_init', 'pho_tiny_mce_before_init' );
+
 
 /**
  * Implement the Custom Header feature.

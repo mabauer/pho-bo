@@ -2247,9 +2247,10 @@ div.sharedaddy h3.sd-title {
 .gallery-item:hover .gallery-caption,
 .gallery-item:focus .gallery-caption{ opacity: 1; }
 
+.site-main .gallery a,
 .site-main .gallery a img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     border: none;
@@ -2259,18 +2260,48 @@ div.sharedaddy h3.sd-title {
     position: relative;
     float: left;
     max-width:100%;
-    margin-right: 3.333333333%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; 
     overflow: hidden;
-    background: #333;
+    /* background: #333; */
+}
+
+.gallery-columns-0 .gallery-item {
+    width: 100%;
+}
+.gallery-columns-1 .gallery-item {
+    width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	width: 370px;
+}
+.gallery-columns-3 .gallery-item {
+    width: 244px;
+    margin-bottom: 14px; 
+    /* Better alignment, but too much white space: */
+    /*
+    width: 240px;
+    margin-bottom:20px; 
+    */
+}
+.gallery-columns-4 .gallery-item {
+    width: 184px;
+    margin-bottom: 8px;
+}
+
+@media all and (max-width:800px) {
+	
+    .gallery-columns-2 .gallery-item,
+    .gallery-columns-3 .gallery-item,
+    .gallery-columns-4 .gallery-item 
+    {
+        width: 100%;
+        padding-right: 0;
+    }
+     
 }
 
 .site-main .gallery dd,
 .site-main .gallery figcaption { margin: 0; }
-
-/* .site-main .gallery-columns-4 .gallery-item { } */
-
-/* .site-main .gallery-columns-4 .gallery-item img { } */
 
 /* Make sure embeds and iframes fit their containers */
 embed,
