@@ -158,7 +158,10 @@ h1, h2, h3, h4, h5, h6 {
     word-break: break-word;
 }
 
-p { margin-bottom: 1.5em; }
+p { 
+    margin-top: 0.5em; 
+    margin-bottom: 1.0em; 
+}
 
 b, strong { font-weight: bold; }
 
@@ -1241,7 +1244,8 @@ ul.sociallinks li a:hover {
     font-size: 36px;
     font-size: 3.6rem;
     color: inherit;
-	padding: 1rem 0 0 0;
+    padding: 1rem 0 0 0;
+    line-height: normal;
 }
 
 .page .entry-title { margin-top: .7em; }
@@ -1254,7 +1258,10 @@ ul.sociallinks li a:hover {
 .entry-content h3,
 .entry-content h4,
 .entry-content h5,
-.entry-content h6 { margin-bottom: .4em; }
+.entry-content h6 { 
+    margin-top: 1em;
+    margin-bottom: 0.5em; 
+}
 
 .entry-content h1 {
     font-size: 32px;
@@ -2357,6 +2364,7 @@ object { max-width: 100%; }
 		margin: 0 0 1rem;
 		font-size: 26px;
         line-height: 130%;
+        padding: 0;
 	}
 
     .entry-box.side-teaser .category-list,
