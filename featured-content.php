@@ -25,7 +25,7 @@
                 echo '<div class="thumbnail-box clear '.$teaser.'">';
                 echo '<a href="'.get_permalink().'" title="'.__('Read ', 'pho').get_the_title().'" rel="bookmark">';
 
-                the_post_thumbnail();
+                the_post_thumbnail('featured-image');
 
                 echo '</a>';
                 echo '</div>';

@@ -24,7 +24,7 @@ get_header(); ?>
 				 * displayed with a large teaser image 
 				 */
 
-				$use_feature_slots = ('move_up_featured_posts' == get_theme_mod( 'feature_slots'));
+				$use_feature_slots = ('move_up_featured_posts' == get_theme_mod( 'feature_slots', true));
 				$default_posts_per_page = get_option( 'posts_per_page', 8 );
 				/* Positions for the feature slots */
 				$upper_slot_position = 0;
