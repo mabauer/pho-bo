@@ -49,6 +49,7 @@ and Blueprint http://www.blueprintcss.org/
 12.0 - Infinite scroll
 13.0 - Media
 14.0 - Footer
+15.0 - Gutenberg Blocks
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2419,4 +2420,21 @@ object { max-width: 100%; }
 	font-size: 1.4rem;
 	padding-bottom: 40px;
 	padding-bottom: 4rem;
+}
+
+/*--------------------------------------------------------------
+15 Gutenberg Blocks
+--------------------------------------------------------------*/
+
+/* 
+TODO: This should probably go in a seperate file like blocks.css
+*/
+
+.wp-block-image, .wp-block-cover {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.wp-block-gallery {
+    margin-left: 0;
 }
