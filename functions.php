@@ -37,17 +37,48 @@ function pho_setup() {
 	load_theme_textdomain( 'pho', get_template_directory() . '/languages' );
 
 	/**
-	* Set the content width based on the theme's design and stylesheet.
-	*/
+	 * Set the content width based on the theme's design and stylesheet.
+	 */
 	if ( ! isset( $GLOBALS['content_width'] ) ) {
 		   $GLOBALS['content_width'] = 760; /* pixels */
 	}
 
-	// This theme styles the visual editor to resemble the theme style.
+	/**
+	 * Add support for Gutenberg.
+	 *
+	 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+	 */
+	add_theme_support( 'gutenberg', array(
+ 
+    	// Theme does not support wide images, galleries and videos.
+    	'wide-images' => false,
+ 
+    	// Make specific theme colors available in the editor.
+    	/* 'colors' => array(
+        '#ffffff',
+        '#000000',
+        '#cccccc',
+		),
+		*/
+		) 
+	);
+
+	/**
+	 * Add support for styling the editors to resemble the theme style 
+	 * 
+	 * For the Gutenberg block editor, the style-sheets are registers via hooks, 
+	 * see: pho_enqueue_block_editor_styles()
+	 * For the old visual editor, this is done via add_edito_style().
+	 */ 
+	add_theme_support( 'editor-styles' );
+
 	$font_url = '//fonts.googleapis.com/css?family=Roboto';
 	add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
 
-	// Add default posts and comments RSS feed links to head.
+
+	/*
+	 * Add default posts and comments RSS feed links to head.
+	 * /
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
@@ -98,6 +129,16 @@ function pho_setup() {
 }
 endif; // pho_setup
 add_action( 'after_setup_theme', 'pho_setup' );
+
+/**
+ * Enqueue editor styles for Gutenberg -- this works with a bit different using a hook!
+ */
+function pho_enqueue_block_editor_styles() {
+	wp_enqueue_style( 'block-editor-style', get_template_directory_uri() . '/inc/editor-style.css' );
+	wp_enqueue_style( 'block-editor-fonts', 'https://fonts.googleapis.com/css?family=Roboto' );
+}
+add_action( 'enqueue_block_editor_assets', 'pho_enqueue_block_editor_styles' );
+	
 
 /**
  * Register widgetized area and update sidebar with default widgets.
