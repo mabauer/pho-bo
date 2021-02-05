@@ -34,13 +34,18 @@ a:visited {
         color: hsl(0, 0%, 20%);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.editor-post-title__input {
 	clear: right;
         font-family: 'Helvetica Neue', 'Roboto', sans-serif;
         font-weight: 900;
         color: #000;
         color: hsl(0, 0%, 0%);
         margin-bottom: .4em;
+}
+
+.editor-post-title__input {
+    font-size: 36px;
 }
 
 h1 {

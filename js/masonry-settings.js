@@ -38,6 +38,44 @@ jQuery(document).ready(function($){
 
     });
 
+
+	// Masonry settings to organize secondary widgets
+    var $secondary = $('#secondary');
+
+    var relayoutSecondaryWidgets = function () {
+        $secondary.masonry('layout');
+    }
+
+    enquire.register("screen and (min-width:800px) and (max-width:1279px)", {
+
+        // Triggered when a media query matches.
+        match : function() {
+            $secondary.masonry({
+                columnWidth: '.widget',
+                itemSelector: '.widget',
+                // gutter: 40, // the widgets introduce some spacing on their own.
+                isFitWidth: false,
+                isAnimated: true
+            });
+            $secondary.imagesLoaded().progress(function() {
+  				$secondary.masonry('layout');
+			});
+
+            setTimeout(relayoutSecondaryWidgets, 1000);
+            $(window).on('resize', relayoutSecondaryWidgets);
+            $(document).on('imageCropped', relayoutSecondaryWidgets);
+        },
+
+        // Triggered when the media query transitions
+        // *from a matched state to an unmatched state*.
+        unmatch : function() {
+            $secondary.masonry('destroy');
+            $(window).off('resize', relayoutSecondaryWidgets);
+            $(document).off('imageCropped', relayoutSecondaryWidgets);
+        }
+
+    });
+
 	// Masonry settings for galleries
     var $galleries = $('.gallery');
 
@@ -179,16 +217,6 @@ jQuery(document).ready(function($){
                     $portfolio.isotope('appended', $item);
                     $portfolio.isotope();
                 });
-
-                /*
-                $portfolio_items.imagesLoaded( function() {
-                    $portfolio_items.each(function () {
-                        $(this).show();
-                        $portfolio.masonry('appended', $(this));
-                        $portfolio.masonry();
-                    });
-                });
-                */
 
                 $(window).on('resize', relayoutPortfolio);
                 $(document).on('imageCropped', relayoutPortfolio);
