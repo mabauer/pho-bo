@@ -1127,6 +1127,35 @@ a:focus.page-numbers{
 /* Search widget */
 .widget_search .search-submit {	display: none; }
 
+/* Secondary widgets */
+
+@media screen and (max-width: 1279px) {
+    #secondary {
+        width: 100%;
+        max-width: 800px;
+    }     
+}
+
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+    #secondary .widget {
+        padding: 0px 20px !important; 
+        float: left;
+        width: 50% !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #secondary {
+        width: 100%;
+        max-width: 280px !important;
+    }
+}
+
+#secondary .widget {
+    width: 100%;
+}
+
+
 /* Footer widgets */
 
 .footer-widgets {

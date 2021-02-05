@@ -139,6 +139,7 @@ Layout: Sidebar right
 
 @media screen and (max-width: 1279px) {
     .site-content .widget-area {
+        padding: 0 0;
         float: left;
         width: auto;
         margin: 1em auto 0;
