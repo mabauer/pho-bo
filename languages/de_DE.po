@@ -519,21 +519,21 @@ msgstr "Blog"
 
 #: page-templates/slideshow.php:75
 msgid "About"
-msgstr "Ãber"
+msgstr "Über"
 
 #: page-templates/slideshow.php:81
 msgid "Next"
-msgstr "NÃ¤chstes Bild"
+msgstr "Vor"
 
 #: page-templates/slideshow.php:86
 msgid "Previous"
-msgstr "Vorheriges Bild"
+msgstr "Zurück"
 
 # @ pho
 #: search.php:16
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse fÃ¼r: %s"
+msgstr "Suchergebnisse für: %s"
 
 # @ pho
 #: single-fml_photo.php:27
