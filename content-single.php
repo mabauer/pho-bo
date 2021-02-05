@@ -8,27 +8,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php
+	<?php
 			if (has_post_thumbnail()) {
 				echo '<div class="thumbnail-box clear">';
-                $thumb_id = get_post_thumbnail_id();
-                $attachment_url = get_permalink($thumb_id);
+				$thumb_id = get_post_thumbnail_id();
+				$attachment_url = get_permalink($thumb_id);
 
-                // Special case: if the featured image is a Flickr media item, link to the Flickr page
-                $attachment = get_post($thumb_id);
-                if ( class_exists('FML\FML')
-                    && ($attachment->post_type == FML\FML::POST_TYPE)) {
-                    $attachment_url = FML\FML::get_flickr_link($attachment);
-                }
+				// Special case: if the featured image is a Flickr media item, link to the Flickr page
+				$attachment = get_post($thumb_id);
+				if ( class_exists('FML\FML')
+					&& ($attachment->post_type == FML\FML::POST_TYPE)) {
+					$attachment_url = FML\FML::get_flickr_link($attachment);
+				}
 
 				if ( !empty($attachment_url) ) {
-                    echo '<a href=' . $attachment_url . '>';
-                    the_post_thumbnail('featured-image');
-				    echo '</a>';
-                }
-                else {
-                    the_post_thumbnail('featured-image');
-                }
+					echo '<a href=' . $attachment_url . '>';
+					the_post_thumbnail('featured-image');
+					echo '</a>';
+				}
+				else {
+					the_post_thumbnail('featured-image');
+				}
 				echo '</div>';
 			}
 		?>
@@ -49,15 +49,15 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
-                    <?php pho_posted_on(); ?>
-                    <?php
-                    if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) {
-                        echo '<span class="comments-link">';
-                        comments_popup_link( __( 'Leave a comment', 'pho' ), __( '1 Comment', 'pho' ), __( '% Comments', 'pho' ) );
-                        echo '</span>';
-                    }
-                    ?>
-                    <?php edit_post_link( sprintf('| %s', __( 'Edit', 'pho' )), '<span class="edit-link">', '</span>' ); ?>
+					<?php pho_posted_on(); ?>
+					<?php
+					if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) {
+						echo '<span class="comments-link">';
+						comments_popup_link( __( 'Leave a comment', 'pho' ), __( '1 Comment', 'pho' ), __( '% Comments', 'pho' ) );
+						echo '</span>';
+					}
+					?>
+					<?php edit_post_link( sprintf('| %s', __( 'Edit', 'pho' )), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 

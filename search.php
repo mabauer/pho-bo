@@ -19,7 +19,20 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'search' ); ?>
+				<?php
+					/* Include a Post Type or Post Format specific template for the content.
+					   If you want to override this in a child theme, then
+					   include a file called content-___.php (where ___ is the
+					   name of the Post Type or Post Format) and that will be
+					   used instead.
+					 */
+				$post_type = get_post_type();
+				if (! empty($post_type)) {
+					get_template_part( 'content', $post_type );
+				} else {
+					get_template_part( 'content', get_post_format() );
+				}
+				?>
 
 			<?php endwhile; ?>
 

@@ -13,15 +13,15 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		
 			<?php get_template_part( 'content', 'single' ); ?>
-                    
-                        <?php 
-                        if ( get_the_author_meta( 'description' ) ) { 
-                            echo '<hr>';
-                            echo '<div class="author-index shorter">';
-                            get_template_part('inc/author','box');
-                            echo '</div>';
-                        }
-                        ?>
+					
+						<?php 
+						if ( get_the_author_meta( 'description' ) ) { 
+							echo '<hr>';
+							echo '<div class="author-index shorter">';
+							get_template_part('inc/author','box');
+							echo '</div>';
+						}
+						?>
 
 			<?php pho_post_nav(); ?>
 

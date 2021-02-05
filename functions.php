@@ -120,7 +120,7 @@ function pho_setup() {
 		'search-form',
 		'comment-form',
 		'gallery',
-        'caption',
+		'caption',
 	) );
 
 	// Enable support for jetpack's portfolio custom type
@@ -153,9 +153,9 @@ function pho_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 
-    register_sidebar( array(
+	register_sidebar( array(
 		'name'          => __( 'Footer Widgets', 'pho' ),
-        'description'   => __( 'Footer widgets area appears, not surprisingly, in the footer of the site.', 'pho' ),
+		'description'   => __( 'Footer widgets area appears, not surprisingly, in the footer of the site.', 'pho' ),
 		'id'            => 'sidebar-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -170,58 +170,58 @@ add_action( 'widgets_init', 'pho_widgets_init' );
  */
 function pho_scripts() {
 
-        // Load parent theme stylesheet even when child theme is active
-        if ( is_child_theme() ) {
-                wp_enqueue_style( 'pho-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
-        } else {
-                wp_enqueue_style( 'pho-style', get_stylesheet_uri() );
-        }
+		// Load parent theme stylesheet even when child theme is active
+		if ( is_child_theme() ) {
+				wp_enqueue_style( 'pho-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+		} else {
+				wp_enqueue_style( 'pho-style', get_stylesheet_uri() );
+		}
 
-        if (is_page_template('page-templates/page-nosidebar.php')
-        		|| ! is_active_sidebar( 'sidebar-1' )) {
-            wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/no-sidebar.css' );
-        } elseif (is_page_template('page-templates/page-nosidebar-wide.php')
-        		|| is_page_template('page-templates/portfolio.php')
-        		|| is_page_template('page-templates/slideshow.php')) {
+		if (is_page_template('page-templates/page-nosidebar.php')
+				|| ! is_active_sidebar( 'sidebar-1' )) {
+			wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/no-sidebar.css' );
+		} elseif (is_page_template('page-templates/page-nosidebar-wide.php')
+				|| is_page_template('page-templates/portfolio.php')
+				|| is_page_template('page-templates/slideshow.php')) {
 			wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/no-sidebar-wide.css' );		
 		} else {
-            wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css' );
-        }
+			wp_enqueue_style( 'pho-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css' );
+		}
 
-        // Load child theme stylesheet
-        if ( is_child_theme() ) {
-                wp_enqueue_style( 'pho-style', get_stylesheet_uri() );
-        }
+		// Load child theme stylesheet
+		if ( is_child_theme() ) {
+				wp_enqueue_style( 'pho-style', get_stylesheet_uri() );
+		}
 
 		// Additional stylesheet for DPE's flexible post widget
 		wp_enqueue_style( 'pho-flexible-posts-widget' , get_template_directory_uri() . '/flexible-posts-widget/flexible-posts-widget.css' );
 
-        // Inlude Google Webfonts
-        wp_enqueue_style( 'pho-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto' );
+		// Inlude Google Webfonts
+		wp_enqueue_style( 'pho-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto' );
 
-        // FontAwesome
-        wp_enqueue_style( 'pho_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css');
+		// FontAwesome
+		wp_enqueue_style( 'pho_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css');
 
-	    wp_enqueue_script( 'pho-functions', get_template_directory_uri() . '/js/functions.js', array(), '20161103', true );
+		wp_enqueue_script( 'pho-functions', get_template_directory_uri() . '/js/functions.js', array(), '20161103', true );
 
-	    wp_enqueue_script( 'pho-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+		wp_enqueue_script( 'pho-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-        wp_enqueue_script( 'pho-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );
+		wp_enqueue_script( 'pho-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );
 
-        wp_enqueue_script( 'pho-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
-        wp_enqueue_script( 'pho-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('jquery'), '20140328', true );
+		wp_enqueue_script( 'pho-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
+		wp_enqueue_script( 'pho-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('jquery'), '20140328', true );
 
 		// Masonry is already shipped with Wordpress, it even includes imagesLoaded
 		wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), '20170303', true );
-        wp_enqueue_script( 'pho-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
+		wp_enqueue_script( 'pho-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
 
-        wp_enqueue_script( 'pho-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20140429', true );
+		wp_enqueue_script( 'pho-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20140429', true );
 
-        if (is_single() || is_author() ) {
-            	wp_enqueue_script( 'pho-hide', get_template_directory_uri() . '/js/hide.js', array('jquery'), '20140310', true );
-        }
+		if (is_single() || is_author() ) {
+				wp_enqueue_script( 'pho-hide', get_template_directory_uri() . '/js/hide.js', array('jquery'), '20140310', true );
+		}
 
-	    wp_enqueue_script( 'pho-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+		wp_enqueue_script( 'pho-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -257,11 +257,11 @@ add_filter( 'pre_get_posts', 'pho_add_custom_post_types_to_query' );
  * Remove comment stuff from attachments
  */
 function pho_remove_comments_from_attachments( $open, $post_id ) {
-    $post = get_post( $post_id );
-    if( $post->post_type == 'attachment' ) {
-        return false;
-    }
-    return $open;
+	$post = get_post( $post_id );
+	if( $post->post_type == 'attachment' ) {
+		return false;
+	}
+	return $open;
 }
 add_filter( 'comments_open', 'pho_remove_comments_from_attachments', 10 , 2 );
 
@@ -270,11 +270,11 @@ add_filter( 'comments_open', 'pho_remove_comments_from_attachments', 10 , 2 );
  * Force IE out its compatibility mode. Either use IE=11 oder IE=edge.
  */
 function pho_add_ie_compatibility_header($headers) {
-    if ( isset( $_SERVER['HTTP_USER_AGENT'] ) && ( strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE' ) !== false ) ) {
-        $headers['X-UA-Compatible'] = 'IE=edge,chrome=1';
-    }
-    
-    return $headers;
+	if ( isset( $_SERVER['HTTP_USER_AGENT'] ) && ( strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE' ) !== false ) ) {
+		$headers['X-UA-Compatible'] = 'IE=edge,chrome=1';
+	}
+	
+	return $headers;
 }
 add_filter('wp_headers', 'pho_add_ie_compatibility_header');
 
@@ -285,9 +285,9 @@ add_filter('wp_headers', 'pho_add_ie_compatibility_header');
  */
 function pho_tiny_mce_before_init( $mce_init ) {
 
-    $mce_init['cache_suffix'] = 'v=' . time();
+	$mce_init['cache_suffix'] = 'v=' . time();
 
-    return $mce_init;    
+	return $mce_init;    
 }
 //add_filter('tiny_mce_before_init', 'pho_tiny_mce_before_init' );
 

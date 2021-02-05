@@ -9,20 +9,20 @@
 ?>
 
 <section class="<?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
-    <div class="index-box">
+	<div class="index-box">
 	<header class="entry-header">
 		<h1 class="entry-title">
-                    <?php
-                    if ( is_404() ) { _e( 'Page not available', 'pho' );
+					<?php
+					if ( is_404() ) { _e( 'Page not available', 'pho' );
 
-                    } else if ( is_search() ) {
-                    	/* translators: %s = search query */
-                    	printf( __( 'Nothing found for %s', 'pho'), '<em>' . get_search_query() . '</em>' );
-                    } else {
-                    	_e( 'Nothing Found', 'pho' );
-                    }
-                    ?>
-                </h1>
+					} else if ( is_search() ) {
+						/* translators: %s = search query */
+						printf( __( 'Nothing found for %s', 'pho'), '<em>' . get_search_query() . '</em>' );
+					} else {
+						_e( 'Nothing Found', 'pho' );
+					}
+					?>
+				</h1>
 	</header><!-- .page-header -->
 
 	<div class="entry-content">
@@ -30,10 +30,10 @@
 
 			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'pho' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
-                <?php elseif ( is_404() ) : ?>
+				<?php elseif ( is_404() ) : ?>
 
-                        <p><?php _e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'pho' ); ?></p>
-                        <?php get_search_form(); ?>
+						<p><?php _e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'pho' ); ?></p>
+						<?php get_search_form(); ?>
 
 		<?php elseif ( is_search() ) : ?>
 
@@ -47,34 +47,34 @@
 
 		<?php endif; ?>
 	</div><!-- .entry-content -->
-    </div><!-- .index-box -->
+	</div><!-- .index-box -->
 
-    <?php
-    if ( is_404() || is_search() ) {
+	<?php
+	if ( is_404() || is_search() ) {
 
-    ?>
-        <header class="page-header"><h1 class="page-title"><?php _e( 'Most recent posts:', 'pho' ); ?></h1></header>
-    <?php
-        // Get the 6 latest posts
-        $args = array(
-            'posts_per_page' => 6
-        );
+	?>
+		<header class="page-header"><h1 class="page-title"><?php _e( 'Most recent posts:', 'pho' ); ?></h1></header>
+	<?php
+		// Get the 6 latest posts
+		$args = array(
+			'posts_per_page' => 6
+		);
 
-        $latest_posts_query = new WP_Query( $args );
+		$latest_posts_query = new WP_Query( $args );
 
-        // The Loop
-        if ( $latest_posts_query->have_posts() ) {
-                while ( $latest_posts_query->have_posts() ) {
+		// The Loop
+		if ( $latest_posts_query->have_posts() ) {
+				while ( $latest_posts_query->have_posts() ) {
 
-                    $latest_posts_query->the_post();
-                    // Get the standard index page content
-                    get_template_part( 'content', get_post_format() );
+					$latest_posts_query->the_post();
+					// Get the standard index page content
+					get_template_part( 'content', get_post_format() );
 
-                }
-        }
-        /* Restore original Post Data */
-        wp_reset_postdata();
-    }
-    ?>
+				}
+		}
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	}
+	?>
 
 </section><!-- .no-results -->
